@@ -980,13 +980,12 @@
       return 'client_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     }
 
-    // Replace the saveClientToFirestore function in llc-input-form.html with this improved version
 function saveClientToFirestore(clientData) {
   showNotification('Submitting your data...', 'info');
   
   console.log('Attempting to save client data:', clientData);
   
-  // First, check if the owner document exists
+  // First, save the client data to the owners collection
   db.collection('owners').doc(ownerID).get()
     .then((doc) => {
       if (!doc.exists) {
@@ -995,6 +994,7 @@ function saveClientToFirestore(clientData) {
         return db.collection('owners').doc(ownerID).set({
           ownerId: ownerID,
           ownerName: ownerData ? ownerData.firstName : 'Unknown',
+          ownerEmail: ownerData ? ownerData.email : 'Unknown',
           createdAt: new Date().toISOString()
         });
       } else {
@@ -1009,24 +1009,25 @@ function saveClientToFirestore(clientData) {
     })
     .then(() => {
       console.log('Client data saved successfully');
-      
-      // Also update the owner's usage count
-      return db.collection('users').where('uniqueId', '==', ownerID).get();
-    })
-    .then((querySnapshot) => {
-      if (!querySnapshot.empty) {
-        const ownerDoc = querySnapshot.docs[0];
-        console.log('Updating usage count for owner:', ownerDoc.id);
-        return ownerDoc.ref.update({
-          usage_count: firebase.firestore.FieldValue.increment(1)
-        });
-      } else {
-        console.log('No owner found in users collection with uniqueId:', ownerID);
-      }
-    })
-    .then(() => {
-      console.log('Usage count updated successfully');
       showNotification('Your data has been submitted successfully! Thank you.', 'success');
+      
+      // Try to update the usage count, but don't fail if it doesn't work
+      db.collection('users').where('uniqueId', '==', ownerID).get()
+        .then((querySnapshot) => {
+          if (!querySnapshot.empty) {
+            const ownerDoc = querySnapshot.docs[0];
+            console.log('Updating usage count for owner:', ownerDoc.id);
+            
+            // Create a separate function to update usage count
+            updateUsageCount(ownerDoc.id);
+          } else {
+            console.log('No owner found in users collection with uniqueId:', ownerID);
+          }
+        })
+        .catch((error) => {
+          console.error('Error finding owner for usage count update:', error);
+          // Don't show error to user since the main submission succeeded
+        });
       
       // Reset form after successful submission
       setTimeout(() => {
@@ -1035,16 +1036,31 @@ function saveClientToFirestore(clientData) {
     })
     .catch((error) => {
       console.error("Error submitting form:", error);
-      
-      // Provide more specific error messages based on the error code
-      if (error.code === 'permission-denied') {
-        showNotification('Permission denied. This might be due to security settings. Please contact support.', 'error');
-      } else if (error.code === 'unavailable') {
-        showNotification('Service temporarily unavailable. Please try again in a few moments.', 'error');
-      } else {
-        showNotification('Error submitting your data: ' + error.message + '. Please try again.', 'error');
-      }
+      showNotification('Error submitting your data. Please try again.', 'error');
     });
+}
+
+// Separate function to update usage count
+function updateUsageCount(ownerDocId) {
+  // Use a transaction to safely update the count
+  db.runTransaction((transaction) => {
+    const ownerDocRef = db.collection('users').doc(ownerDocId);
+    return transaction.get(ownerDocRef).then((doc) => {
+      if (!doc.exists) {
+        throw new Error("Owner document does not exist!");
+      }
+      
+      const newUsageCount = (doc.data().usage_count || 0) + 1;
+      transaction.update(ownerDocRef, { usage_count: newUsageCount });
+      return newUsageCount;
+    });
+  })
+  .then((newCount) => {
+    console.log('Usage count updated successfully to:', newCount);
+  })
+  .catch((error) => {
+    console.error('Error updating usage count:', error);
+  });
 }
     
     // Toggle Share Percentage input based on Subscriber checkbox
