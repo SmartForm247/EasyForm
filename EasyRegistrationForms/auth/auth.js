@@ -127,7 +127,7 @@ function login() {
                     })
                     .catch((checkError) => {
                         showLoading(false);
-                        showNotification('Error checking credentials. Please try again.', 'error');
+                        showNotification('Network error. Please try again.', 'error');
                     });
             } else {
                 showLoading(false);
@@ -163,7 +163,7 @@ function signup() {
             const uniqueId = generateUniqueId(firstName, email);
             
             // Create shareable link
-            const shareableLink = `https://francis2150.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`;
+            const shareableLink = `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`;
             
             // Create user record in Firestore
             const userData = {

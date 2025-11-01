@@ -196,7 +196,7 @@ function loadUserData() {
                 updateDashboard(userData);
                 
                 // Now, create the shareable link and save everything to Firestore
-                const shareableLink = `https://francis2150.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`;
+                const shareableLink = `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`;
                 userData.shareableLink = shareableLink; // Update the object with the real link
 
                 userDocRef.set(userData)
@@ -306,7 +306,7 @@ function updateDashboard(userData) {
             console.log('Shareable link set to:', userData.shareableLink);
         } else if (userData.uniqueId) {
             // If shareableLink doesn't exist but uniqueId does, create the link
-            const shareableLink = `https://francis2150.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${userData.uniqueId}`;
+            const shareableLink = `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${userData.uniqueId}`;
             shareableLinkElement.value = shareableLink;
             
             // Update the user document with the shareable link
