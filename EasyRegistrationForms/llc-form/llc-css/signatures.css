@@ -1,0 +1,55 @@
+.signature-box {
+  background-color: transparent;
+  position: absolute; /* important for drag */
+  border: 1px dashed #888;
+  cursor: move; /* move cursor instead of pointer */
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  overflow: hidden;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-width: 50px; /* prevent shrinking too small */
+  min-height: 20px;
+}
+
+.signature-box.has-image {
+  color: transparent;
+  border: none;
+}
+
+.signature-box.focused {
+  border: 2px solid blue; /* highlight when selected */
+}
+
+/* Resize handle */
+.signature-box .resize-handle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: se-resize;
+  right: -6px;
+  bottom: -6px;
+}
+
+/* Print adjustments */
+@media print {
+  .signature-box {
+    -webkit-print-color-adjust: exact; /* Safari / Chrome */
+    print-color-adjust: exact; /* Modern browsers */
+    background-color: white; /* ensures contrast */
+    border: none; /* hide border in print */
+  }
+  .signature-box .resize-handle {
+    display: none; /* hide resize handle in print */
+  }
+
+  .sect1 {
+    display:none; /* prevent page breaks inside sections */
+  }
+}

@@ -1,0 +1,195 @@
+/* Page 14 */
+.checkmark1 {
+    top: 150px;
+    left: 367px;
+    width: 14px;
+    height: 12px;
+    position: absolute;
+}
+
+.companyName2 {
+    top: 261px;
+    left: 35px;
+    width: 350px;
+    position: absolute;
+}
+
+.Country {
+    top: 300px;
+    left: 435px;
+    width: 165px;
+    position: absolute;
+}
+
+.checkmark2 {
+    top: 322px;
+    left: 367px;
+    width: 14px;
+    height: 12px;
+    position: absolute;
+}
+
+ .benOner1{
+    top: 492px;
+    left: 35px;
+    width: 345px;
+   
+    position: absolute;
+}
+
+.benOner2{
+    top: 530px;
+    left: 35px;
+    width: 345px;
+
+    position: absolute;
+}
+
+.benOner3{
+    top: 567.5px;
+    left: 35px;
+    width: 345px;
+
+    position: absolute;
+}
+
+.benOner4{
+    top: 604.5px;
+    left: 35px;
+    width: 345px;
+    position: absolute;
+}
+
+.benOner5{
+    top: 642.5px;
+    left: 35px;
+    width: 345px;
+    position: absolute;
+}
+
+.benOner6{
+    top: 679.5px;
+    left: 35px;
+    width: 345px;
+    position: absolute;
+}
+
+
+.BO1M {
+    top: 494px;
+    left: 439px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.BO2M {
+    top: 532px;
+    left: 439px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.BO3M {
+    top: 570px;
+    left: 439px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.BO4M {
+    top: 607px;
+    left: 439px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.BO5M {
+    top: 645px;
+    left: 439px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.BO6M {
+    top: 682px;
+    left: 439px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.dir1-signature {
+    top: 120px;
+    left: 485px;
+    width: 157px;
+   
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+.directorName {
+   
+    top: 970px;
+    left: 186px;
+    width: 209px;
+    font-size: 10px;
+    position: absolute;
+}
+.DP {
+    top: 1002px;
+    left: 185px;
+    width: 157px;
+    font-size: 12px;
+    position: absolute;
+}
+
+
+
+.date1 {
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: 1006px;
+    left: 510px;
+    width: 209px;
+    position: absolute;
+}
+
+/* Page 15 */
+.secFullName{
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: -2px;
+    left: 90px;
+    width: 289px;
+    font-size: 12px;
+    position: absolute;
+}
+
+#secP {
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: 52.5px;
+    left: 165px;
+    width: 129px;
+    font-size: 12px;
+    position: absolute;
+}
+
+.dir\.1-signature {
+    top: -9px;
+    left: 485px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+.date2 {
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: 52px;
+    left: 510px;
+    width: 219px;
+    position: absolute;
+}
