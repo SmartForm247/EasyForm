@@ -19,20 +19,25 @@
     <link rel="stylesheet" href="../llc-css/consentLet.css">
     <link rel="stylesheet" href="../llc-css/addPages.css">
     <link rel="stylesheet" href="../llc-css/addSubPages.css">
+     <link rel="stylesheet" href="../llc-css/renderer.css">
     <title>LIMITED LIABILITY FORM</title>
     <style></style>
   </head>
   <body>
 <div class="button-container">
-  <button class="print-btn" onclick="window.print()">Print form</button>
+ 
   <button id="download-btn" class="clear-btn">Download</button>
   <button class="clear-all" id="reset-all">Reset All</button>
-  <button onclick="location.href='index.html'" class="home" id="home">index</button>
+  <button onclick="location.href='forms.html'" class="home" id="home">Back To Forms</button>
 </div>
 
 <main>
-<section class="sect1" id="sect1" style="display:;">
-  <h2 class="header">Company Registration Requirement</h2>
+
+  
+  
+<section class="sect1" id="sect1">
+  <div class="input-section">
+    <h2 class="header">Limited Form</h2>
 
   <form id="icompanyForm">
 
@@ -180,7 +185,17 @@
       <legend>Secretary Setting</legend>
       <div class="form-group">
         <label for="isecQualification">Qualification:</label>
-        <input type="text" id="isecQualification">
+       <select id="isecQualification" class="secQualification">
+          <option value="">Select Qualification</option>
+          <option value="Professional qualification">Professional qualification</option>
+          <option value="Tertiary level qualification">Tertiary level qualification</option>
+          <option value="Company Secretary Trainee">Company Secretary Trainee</option>
+          <option value="Barrister or Solicitor in the Republic">Barrister or Solicitor in the Republic</option>
+          <option value="Institute of Chartered Accountants">Institute of Chartered Accountants</option>
+          <option value="Under supervision of a qualified Company Secretary">Under supervision of a qualified Company Secretary</option>
+          <option value="Institute of Chartered Secretaries and Administrators">Institute of Chartered Secretaries and Administrators</option>
+      </select>
+
       </div>
     </fieldset>
 
@@ -203,17 +218,63 @@
   <button type="button" id="iaddOwnerBtn">Add Beneficial Owner</button>
 </fieldset>
 
-
-    <button type="submit">Submit Company</button>
   </form>
 
+  
+  </div>
+  <div class="data-section">
+     <div class="container">
+    <div class="nav-container">
+      <h2 id="mainTitle">Client Data Dashboard</h2>
+      
+    </div>
+
+    <!-- User Information -->
+    <div id="userInfo" class="user-info">
+      <i class="fas fa-user-circle"></i>
+      <div>
+        <p>Welcome, <span class="user-name" id="userName">User</span></p>
+        <p>Your Unique ID: <span id="userUniqueId"></span></p>
+      </div>
+    </div>
+
+    <!-- Client List View -->
+    <div id="clientListView">
+      <div class="form-container">
+        <div class="section-header">
+          <h3>Submitted Client Data</h3>
+          <button class="btn-add" onclick="window.location.href='llc-input-form.html'">Add New Client</button>
+        </div>
+        <div id="clientListContainer" class="client-list">
+          <!-- Client entries will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Detail View -->
+    <div id="clientDetailView" style="display: none;">
+      <div class="form-container">
+        <div class="section-header">
+          <button class="btn-cancel" onclick="showClientList()">← Back to Client List</button>
+          <h3 id="clientDetailTitle">Client Data</h3>
+        </div>
+        <div id="clientDetailContainer">
+          <!-- Client data will be displayed here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification element -->
+  <div id="notification" class="notification"></div>
+  </div>
   
 </section>
 
 
 <!--output section-->
 
-<section class="sect2">
+<section class="sect2" id="sect2" style="display:none;">
 <div class="page" >
   <img src="../llc-images/LLC1.jpg" alt="Page 1">
 
@@ -480,8 +541,8 @@
 </div>
 
 <!--bo1, this contains the list of all beneficial Owners-->
-<div class="page" >
-  <img src="../llc-images/LLC14.jpg" alt="Page 14">
+<div class="page">
+  <img style="margin-top: 125px;" src="../llc-images/LLC14.jpg" alt="Page 14">
   <p class="overlay-text checkmark1">&#10004;</p>
   <p class="overlay-text companyName2" id="companyName2"></p>
   <p class="overlay-text Country" id="Country">ghana</p>
@@ -697,7 +758,10 @@
 
 
 </main>
-
+ <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
 
     <script src="../llc-js/editable.js"></script>
    
@@ -710,14 +774,16 @@
 
 <script src="../llc-js/role.js"></script>
 
-<script src="../llc-js/secContrl.js"></script>
+
 
 <script src="../llc-js/secContrl.js"></script>
 
 <script src="../llc-js/addHandler.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
+<script src="../llc-js/renderer.js"></script>
+<script src="../llc-js/validation.js"></script>
 <script src="../llc-js/download.js"></script>
+
 
   </body>
 </html>

@@ -1,36 +1,31 @@
 /* Form Container and Header */
 .sect1 {
-  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: auto;
   margin: 0 auto;
   padding: 2rem;
+  column-gap: 50px;
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   font-family: 'Open Sans', sans-serif;
 }
 
+
+
 .header {
-  color: #2c3e50;
+  color: #2d6125;
   font-family: 'Quicksand', sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
-  padding-bottom: 1rem;
-  font-weight: 700;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.header:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(to right, #3498db, #2ecc71);
-  border-radius: 2px;
-}
+
 
 /* Form Styling */
 #icompanyForm {
@@ -43,7 +38,7 @@
 fieldset {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
@@ -55,7 +50,7 @@ fieldset:hover {
 
 legend {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #3498db;
   padding: 0 0.8rem;
   font-weight: 700;
@@ -70,7 +65,7 @@ legend {
 
 .form-group label {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #34495e;
   margin-bottom: 0.5rem;
   font-weight: 600;
@@ -82,7 +77,7 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 select {
-  padding: 0.8rem 1rem;
+  padding: 0.3rem 1rem;
   border: 2px solid #e0e0e0;
   border-radius: 6px;
   font-size: 1rem;

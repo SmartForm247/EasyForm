@@ -853,6 +853,9 @@ for (let i = 0; i < fieldsets.length; i++) {
       form.querySelectorAll("input, select, textarea").forEach(el => {
         el.addEventListener("input", updateOverlay);
         el.addEventListener("change", updateOverlay);
+        el.addEventListener("paste", (e) => {
+          setTimeout(updateOverlay, 10);
+        });
       });
     }
 
@@ -880,23 +883,36 @@ for (let i = 0; i < fieldsets.length; i++) {
       const container = document.getElementById(id);
       if (!container) return;
       const obs = new MutationObserver(mutations => {
+        // Uncomment for debugging to see when a container changes:
+        // console.log(`Mutation observed in container: ${id}`);
+        
         // Small delay allowing scripts that create elements to run
         setTimeout(updateOverlay, 80);
+        
         // Also rewire new inputs inside newly created fieldsets
         mutations.forEach(m => {
           m.addedNodes?.forEach(node => {
-            if (node.nodeType === 1) {
-              node.querySelectorAll?.("input, select, textarea").forEach(el => {
-                el.addEventListener("input", updateOverlay);
-                el.addEventListener("change", updateOverlay);
-              });
+            if (node.nodeType === 1) { // It's an Element node
+              const inputs = node.querySelectorAll?.("input, select, textarea");
+              if (inputs && inputs.length > 0) {
+                // Uncomment for debugging to see when listeners are attached:
+                // console.log(`Attaching listeners to ${inputs.length} new inputs in ${id}`);
+                inputs.forEach(el => {
+                  el.addEventListener("input", updateOverlay);
+                  el.addEventListener("change", updateOverlay);
+                  // THIS IS THE FIX: Add paste event listener for ALL dynamically added elements
+                  el.addEventListener("paste", (e) => {
+                    setTimeout(updateOverlay, 10);
+                  });
+                });
+              }
               // Check for role-checkboxes added - attach change handler
               node.querySelectorAll?.(".roleCheck").forEach(cb => {
                 cb.addEventListener("change", () => {
                   setTimeout(updateOverlay, 40);
                 });
               });
-              // *** MODIFICATION: Attach share listeners to new nodes ***
+              // Attach share listeners to new nodes
               attachShareListeners(node);
             }
           });
@@ -905,6 +921,7 @@ for (let i = 0; i < fieldsets.length; i++) {
       obs.observe(container, { childList: true, subtree: true });
     };
 
+    // This single function is used for all three dynamic sections.
     observeContainer("idirectorsContainer");
     observeContainer("isubscribersContainer");
     observeContainer("iownersContainer");

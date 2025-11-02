@@ -425,8 +425,12 @@
   // Fill first N subscribers into SH1/SH2 overlays (maps up to 2)
   function fillSubscribers() {
     const container = document.getElementById("isubscribersContainer");
-    if (!container) return;
+    if (!container) {
+      console.log("fillSubscribers: isubscribersContainer not found");
+      return;
+    }
     const fieldsets = Array.from(container.querySelectorAll("fieldset"));
+    console.log(`fillSubscribers: Found ${fieldsets.length} subscriber fieldsets`); // Debug log
 
     for (let i = 0; i < 2; i++) {
       const fs = fieldsets[i];
@@ -453,7 +457,8 @@
       const full = [fname, mname, sname].filter(Boolean).join(" ");
       const tin = val(prefix + "tin");
       const gh = val(prefix + "ghanaCard");
-      const shares = val(prefix + "sharePercent") || val("isubscriberShares") || "";
+      // *** FIX: Corrected field name to match the normalized key from the Roles module ***
+      const shares = val(prefix + "sharepercent") || val(prefix + "sharePercent") || val("isubscriberShares") || "";
       const address = val(prefix + "resStreet") + " " + val(prefix + "resTown");
 
       // Map everything

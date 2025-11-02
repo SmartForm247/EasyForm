@@ -327,7 +327,7 @@ document.addEventListener('paste', function (event) {
     // Split by tab, comma, or newline (handles Excel/Sheets/CSV copy)
     // Keep empty values to maintain field positions
     const values = pasteData
-      .split(/\t|,|\n/)
+      .split(/\t|\r?\n/)
       .map(v => v.trim());
 
     // Get ALL visible, enabled inputs in document order

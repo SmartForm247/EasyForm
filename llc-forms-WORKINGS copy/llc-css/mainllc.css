@@ -11,14 +11,14 @@
 
   .button-container {
   position: fixed;
- width: 500px;
+  width: 600px;
   right: 200px;
   left: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;  
+  grid-template-columns: 1fr 1fr 1fr;  
   gap: 10px;
   background-color: black;
-  padding: 10px;
+  padding: 1px;
   
   border-radius: 10px;
   z-index: 1000;  /* ensure it stays on top */
@@ -54,7 +54,8 @@
       position: relative;    /* allows overlay */
       display: block;
       width: 210mm;          /* A4 width */
-      margin: 0 auto;
+      margin-top: 0;
+      margin-bottom:0px;
       border: none;
       page-break-before: auto;
       page-break-inside: avoid;
@@ -175,4 +176,24 @@
 .share-validation-error.warning {
   color: rgb(0, 42, 255) !important;
   display: block !important;
+}
+
+
+/* Validation fields */
+select.empty {
+  background-color: red !important;
+  color: white !important;
+}
+
+select.filled {
+  background-color: green !important;
+  color: white !important;
+}
+
+input.empty {
+  border: 2px solid red !important;
+}
+
+input.filled {
+  border: 2px solid green !important;
 }
