@@ -1,0 +1,160 @@
+.page {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+}
+
+/* First Statutory Declaration */
+
+.FdirectorFullName {
+    top: 278px;
+    left: 215px;
+    width: 325px;
+}
+
+.FdirectorFullName2 {
+    top: 368px;
+    left: 215px;
+    width: 325px;
+}
+
+.FdirectorHouseNumber {
+    top: 398px;
+    left: 165px;
+    width: 105px;
+}
+
+.FdirectorLandmark {
+    top: 398px;
+    left: 392px;
+    width: 300px;
+}
+
+.FdirectorStreetName {
+    top: 424px;
+    left: 232px;
+    width: 300px;
+}
+
+.FdirectorTownCity {
+    top: 454px;
+    left: 232px;
+    width: 300px;
+}
+
+.FdeclarationCity {
+    top: 810px;
+    left: 232px;
+    width: 300px;
+}
+
+.FdeclarationDay {
+    top: 842px;
+    left: 182px;
+    width: 80px;
+}
+
+.FdeclarationMonth {
+    top: 842px;
+    left: 392px;
+    width: 100px;
+}
+
+.FdeclarationYear {
+    top: 844px;
+    left: 580px;
+    width: 80px;
+}
+
+.FdirectorFullName3 {
+    top: 873px;
+    left: 95px;
+    width: 335px;
+}
+
+.FdirectorSignature {
+    top: 870px;
+    left: 510px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}
+
+
+/* Second Statutory Declaration */
+
+.SdirectorFullName {
+    top: 278px;
+    left: 215px;
+    width: 325px;
+}
+
+.SdirectorFullName2 {
+    top: 368px;
+    left: 215px;
+    width: 325px;
+}
+
+.SdirectorHouseNumber {
+    top: 398px;
+    left: 165px;
+    width: 105px;
+}
+
+.SdirectorLandmark {
+    top: 398px;
+    left: 392px;
+    width: 300px;
+}
+
+.SdirectorStreetName {
+    top: 424px;
+    left: 232px;
+    width: 300px;
+}
+
+.SdirectorTownCity {
+    top: 454px;
+    left: 232px;
+    width: 300px;
+}
+
+.SdeclarationCity {
+    top: 810px;
+    left: 232px;
+    width: 300px;
+}
+
+.SdeclarationDay {
+    top: 842px;
+    left: 182px;
+    width: 80px;
+}
+
+.SdeclarationMonth {
+    top: 842px;
+    left: 392px;
+    width: 100px;
+}
+
+.SdeclarationYear {
+    top: 844px;
+    left: 580px;
+    width: 80px;
+}
+
+.SdirectorFullName3 {
+    top: 873px;
+    left: 95px;
+    width: 335px;
+}
+
+.SdirectorSignature {
+    top: 870px;
+    left: 510px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}

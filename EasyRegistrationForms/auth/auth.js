@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if user is already logged in
     auth.onAuthStateChanged(user => {
         if (user) {
-            window.location.href = 'index.html';
+            window.location.href = '../../index.html';
         }
     });
 
@@ -118,7 +118,7 @@ function login() {
                         auth.createUserWithEmailAndPassword(email, phone)
                             .then((userCredential) => {
                                 showLoading(false);
-                                window.location.href = 'index.html';
+                                window.location.href = '../../index.html';
                             })
                             .catch((createError) => {
                                 showLoading(false);

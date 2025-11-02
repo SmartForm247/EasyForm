@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         auth.signOut();
     });
 
-    // Add Director Button
-    document.getElementById('addDirectorBtn')?.addEventListener('click', addDirector);
+    
 
     // Form Submit
     const form = document.querySelector('form');
@@ -102,81 +101,6 @@ function updateSubmissionCost() {
         });
 }
 
-function addDirector() {
-    const directorId = Date.now();
-    const directorItem = document.createElement('div');
-    directorItem.className = 'director-item';
-    directorItem.id = `director-${directorId}`;
-    
-    directorItem.innerHTML = `
-        <button class="remove-btn" onclick="removeDirector(${directorId})">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="form-control director-name" required>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Phone Number</label>
-                <div class="input-group">
-                    <span class="input-group-text">+233</span>
-                    <input type="tel" class="form-control director-phone" required>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control director-email" required>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Address</label>
-                <input type="text" class="form-control director-address" required>
-            </div>
-        </div>
-    `;
-    
-    document.getElementById('directorsList').appendChild(directorItem);
-    
-    directors.push({
-        id: directorId,
-        name: '',
-        phone: '',
-        email: '',
-        address: ''
-    });
-}
-
-function removeDirector(directorId) {
-    document.getElementById(`director-${directorId}`).remove();
-    directors = directors.filter(d => d.id !== directorId);
-}
-
-function collectFormData() {
-    const form = document.querySelector('form');
-    const formData = new FormData(form);
-    const data = {};
-    
-    // Collect all form fields
-    for (let [key, value] of formData.entries()) {
-        data[key] = value;
-    }
-    
-    // Collect directors if present
-    const directorItems = document.querySelectorAll('.director-item');
-    if (directorItems.length > 0) {
-        data.directors = [];
-        directorItems.forEach(item => {
-            data.directors.push({
-                name: item.querySelector('.director-name').value,
-                phone: item.querySelector('.director-phone').value,
-                email: item.querySelector('.director-email').value,
-                address: item.querySelector('.director-address').value
-            });
-        });
-    }
-    
-    return data;
-}
 
 function submitForm(e) {
     e.preventDefault();
@@ -201,14 +125,7 @@ function submitForm(e) {
                     return;
                 }
                 
-                // Prepare submission data
-                const submissionData = {
-                    userId: currentUser.uid,
-                    formType: formType,
-                    formData: collectFormData(),
-                    status: 'pending',
-                    submittedAt: firebase.firestore.FieldValue.serverTimestamp()
-                };
+            
                 
                 // Save submission to Firestore
                 db.collection('submissions').add(submissionData)

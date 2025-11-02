@@ -1,0 +1,199 @@
+ body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+  .button-container {
+  position: fixed;
+  width: 600px;
+  right: 200px;
+  left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  gap: 10px;
+  background-color: black;
+  padding: 1px;
+  
+  border-radius: 10px;
+  z-index: 1000;  /* ensure it stays on top */
+  
+}
+
+/* Make all buttons share the same style */
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Different colors for each button */
+.print-btn { background: green; }
+.clear-btn { background: blue; }
+.clear-all { background: red; }
+.home { background: rgb(9, 164, 184); }
+
+/* Optional hover effects */
+.print-btn:hover { background: #005c00; }
+.clear-btn:hover { background: #003d99; }
+.clear-all:hover { background: darkred; }
+.home:hover { background: #007d8c; }
+
+
+    /* Page wrapper */
+    .page {
+      position: relative;    /* allows overlay */
+      display: block;
+      width: 210mm;          /* A4 width */
+      margin-top: 0;
+      margin-bottom:0px;
+      border: none;
+      page-break-before: auto;
+      page-break-inside: avoid;
+    }
+
+    .page img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Text overlay */
+    .overlay-text {
+      
+     font-weight:bolder;
+      color: black;
+      background-color: white;
+       line-height: 1.242;
+      /* optional: white background for readability */
+      padding: 0px 2px;
+      
+      font-size: 13.3px;                /* bigger, like pen writing */
+     
+     
+      text-transform: uppercase;             /* force ALL CAPS */
+      
+    }
+
+    /* Print adjustments */
+    @media print {
+      body {
+        background: white;
+      }
+      .button-container {
+        display: none;  /* hide button container */
+      }
+      .print-btn {
+        display: none;
+      }
+     .clear-btn{
+        display: none;
+      }
+
+      .clear-all{
+        display: none;
+      }
+      .home{
+        display: none;
+      }
+
+      .page {
+        width: 210mm;
+         position: relative;          /* ✅ restore positioning context */
+        height: 297mm;
+        page-break-after: always;
+      }
+    }
+
+
+
+
+.signature{
+  background-color: transparent;
+  color: red;
+}
+
+ .static{
+  color: #003d99;
+  background-color: #f9f9f9;
+ }
+
+ p {
+  background-color: transparent;
+}
+
+@media print {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    height: auto;
+    background: white !important;
+    display: block !important;     /* ✅ override flex */
+    flex-direction: initial !important;
+    align-items: initial !important;
+    overflow: visible !important;
+  }
+
+  .page {
+    position: relative;
+    display: block;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    page-break-after: always;
+    overflow: hidden;
+    transform: none !important;     /* ✅ stops GPU layers */
+    backface-visibility: hidden;    /* ✅ stops flicker */
+  }
+}
+
+/* Add this CSS to your stylesheet */
+
+/* Base style for the validation message */
+.share-validation-error {
+  font-size: 0.8em;
+  margin-top: 4px;
+  display: none; /* Hidden by default */
+}
+
+/* Style for when the total exceeds 100% (ERROR) */
+.share-validation-error.error {
+  color: red !important;
+  display: block !important;
+}
+
+/* Style for when the total is less than 100% (WARNING/INFO) */
+.share-validation-error.warning {
+  color: rgb(0, 42, 255) !important;
+  display: block !important;
+}
+
+
+/* Validation fields */
+select.empty {
+  background-color: red !important;
+  color: white !important;
+}
+
+select.filled {
+  background-color: green !important;
+  color: white !important;
+}
+
+input.empty {
+  border: 2px solid red !important;
+}
+
+input.filled {
+  border: 2px solid green !important;
+}
