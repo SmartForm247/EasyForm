@@ -550,6 +550,7 @@
     // Initialize the system
     let ownerID = null;
     let ownerData = null;
+    const FORM_TYPE = 'sole'; // This form type identifier
 
     // Get owner ID from URL parameters
     document.addEventListener('DOMContentLoaded', function() {
@@ -670,7 +671,7 @@
       const clientData = {
         id: clientId,
         submittedAt: submittedAt,
-        formType: 'sole',
+        formType: FORM_TYPE,
         ...formData,
         ownerId: ownerID,
         ownerName: ownerData ? ownerData.firstName : 'Unknown'
@@ -678,12 +679,12 @@
       
       console.log('Client data to save:', clientData);
       
-      // Save to Firestore under the owner's collection
+      // Save to Firestore under the form-specific collection
       saveClientToFirestore(clientData);
     });
 
     function generateClientId() {
-      return 'sole_client_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      return `${FORM_TYPE}_client_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
 
     function saveClientToFirestore(clientData) {
@@ -691,11 +692,10 @@
       
       console.log('Attempting to save client data:', clientData);
       
-      // First, save the client data to the owners collection
+      // Create the owner document if it doesn't exist
       db.collection('owners').doc(ownerID).get()
         .then((doc) => {
           if (!doc.exists) {
-            // Create the owner document if it doesn't exist
             console.log('Owner document does not exist, creating it');
             return db.collection('owners').doc(ownerID).set({
               ownerId: ownerID,
@@ -709,22 +709,22 @@
           }
         })
         .then(() => {
-          // Now save the client data
-          console.log('Saving client data to:', `owners/${ownerID}/clients/${clientData.id}`);
-          return db.collection('owners').doc(ownerID).collection('clients').doc(clientData.id).set(clientData);
+          // Save to form-specific collection: owners/{ownerID}/{FORM_TYPE}_clients/{clientID}
+          console.log(`Saving client data to: owners/${ownerID}/${FORM_TYPE}_clients/${clientData.id}`);
+          return db.collection('owners').doc(ownerID).collection(`${FORM_TYPE}_clients`).doc(clientData.id).set(clientData);
         })
         .then(() => {
           console.log('Client data saved successfully');
           showNotification('Your data has been submitted successfully! Thank you.', 'success');
           
-          // Try to update the usage count, but don't fail if it doesn't work
+          // Try to update the usage count for this specific form type
           db.collection('users').where('uniqueId', '==', ownerID).get()
             .then((querySnapshot) => {
               if (!querySnapshot.empty) {
                 const ownerDoc = querySnapshot.docs[0];
                 console.log('Updating usage count for owner:', ownerDoc.id);
                 
-                // Create a separate function to update usage count
+                // Update both total usage and form-specific usage
                 updateUsageCount(ownerDoc.id);
               } else {
                 console.log('No owner found in users collection with uniqueId:', ownerID);
@@ -748,7 +748,7 @@
 
     // Separate function to update usage count
     function updateUsageCount(ownerDocId) {
-      // Use a transaction to safely update the count
+      // Use a transaction to safely update the counts
       db.runTransaction((transaction) => {
         const ownerDocRef = db.collection('users').doc(ownerDocId);
         return transaction.get(ownerDocRef).then((doc) => {
@@ -756,13 +756,25 @@
             throw new Error("Owner document does not exist!");
           }
           
-          const newUsageCount = (doc.data().usage_count || 0) + 1;
-          transaction.update(ownerDocRef, { usage_count: newUsageCount });
-          return newUsageCount;
+          const data = doc.data();
+          const newTotalUsageCount = (data.usage_count || 0) + 1;
+          
+          // Update form-specific usage count
+          const formUsage = data.formUsage || {};
+          const newFormUsageCount = (formUsage[FORM_TYPE] || 0) + 1;
+          formUsage[FORM_TYPE] = newFormUsageCount;
+          
+          // Update both total and form-specific usage
+          transaction.update(ownerDocRef, { 
+            usage_count: newTotalUsageCount,
+            formUsage: formUsage
+          });
+          
+          return { total: newTotalUsageCount, form: newFormUsageCount };
         });
       })
-      .then((newCount) => {
-        console.log('Usage count updated successfully to:', newCount);
+      .then((counts) => {
+        console.log('Usage counts updated successfully:', counts);
       })
       .catch((error) => {
         console.error('Error updating usage count:', error);

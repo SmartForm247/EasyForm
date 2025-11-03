@@ -18,6 +18,7 @@ const db = firebase.firestore();
 let currentUser = null;
 let currentClientId = null;
 let ownerUniqueId = null;
+const FORM_TYPE = 'llc'; // This form type identifier
 
 // Check if user is logged in
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,8 +59,8 @@ function loadUserData() {
 function loadClientData() {
   showNotification('Loading client data...', 'info');
   
-  // FIXED: Query the owners collection with the owner's unique ID and then the clients subcollection
-  db.collection('owners').doc(ownerUniqueId).collection('clients')
+  // UPDATED: Query the form-specific collection for LLC forms
+  db.collection('owners').doc(ownerUniqueId).collection(`${FORM_TYPE}_clients`)
     .orderBy('submittedAt', 'desc')
     .get()
     .then((querySnapshot) => {
@@ -71,7 +72,7 @@ function loadClientData() {
         });
       });
       
-      console.log('Loaded clients:', clients);
+      console.log('Loaded LLC clients:', clients);
       
       if (clients.length === 0) {
         showEmptyState();
@@ -89,9 +90,9 @@ function showEmptyState() {
   const container = document.getElementById('clientListContainer');
   container.innerHTML = `
     <div class="empty-state">
-      <h3>No Client Data Found</h3>
-      <p>No clients have submitted data through your link yet.</p>
-      <p>Share your unique link with clients to start collecting data.</p>
+      <h3>No LLC Client Data Found</h3>
+      <p>No clients have submitted LLC registration data through your link yet.</p>
+      <p>Share your unique LLC link with clients to start collecting data.</p>
     </div>
   `;
 }
@@ -100,7 +101,7 @@ function renderClientList(clients) {
   const container = document.getElementById('clientListContainer');
   
   container.innerHTML = clients.map(client => {
-    // FIXED: Extract company name from the flattened data structure
+    // Extract company name from the flattened data structure
     const companyName = client['company_Company Name'] || 'Unknown Company';
     const submittedDate = new Date(client.submittedAt).toLocaleString();
     
@@ -123,8 +124,8 @@ function renderClientList(clients) {
 }
 
 function viewClient(clientId) {
-  // FIXED: Get the specific client document from the correct path
-  db.collection('owners').doc(ownerUniqueId).collection('clients').doc(clientId).get()
+  // UPDATED: Get the specific client document from the form-specific collection
+  db.collection('owners').doc(ownerUniqueId).collection(`${FORM_TYPE}_clients`).doc(clientId).get()
     .then((doc) => {
       if (doc.exists) {
         const client = doc.data();
@@ -132,9 +133,9 @@ function viewClient(clientId) {
         
         document.getElementById('clientListView').style.display = 'none';
         document.getElementById('clientDetailView').style.display = 'block';
-        document.getElementById('mainTitle').textContent = 'Client Data Details';
+        document.getElementById('mainTitle').textContent = 'LLC Client Data Details';
         
-        // FIXED: Extract company name from the flattened data structure
+        // Extract company name from the flattened data structure
         const companyName = client['company_Company Name'] || 'Unknown Company';
         document.getElementById('clientDetailTitle').textContent = `${companyName} - Submitted ${new Date(client.submittedAt).toLocaleString()}`;
         
@@ -153,7 +154,7 @@ function renderClientDetail(client) {
   const container = document.getElementById('clientDetailContainer');
   container.innerHTML = '';
   
-  // FIXED: Render Business Information from the flattened data structure
+  // Render Business Information from the flattened data structure
   const businessFields = [
     { label: 'Company Name', value: client['company_Company Name'] || '' },
     { label: 'Presented By', value: client['company_Presented By'] || '' },
@@ -399,8 +400,8 @@ function renderClientDetail(client) {
 
 function deleteClient(clientId) {
   if (confirm('Are you sure you want to delete this client data?')) {
-    // FIXED: Delete from the correct path
-    db.collection('owners').doc(ownerUniqueId).collection('clients').doc(clientId).delete()
+    // UPDATED: Delete from the form-specific collection
+    db.collection('owners').doc(ownerUniqueId).collection(`${FORM_TYPE}_clients`).doc(clientId).delete()
       .then(() => {
         showNotification('Client data deleted successfully!');
         loadClientData(); // Reload the client list
@@ -415,7 +416,7 @@ function deleteClient(clientId) {
 function showClientList() {
   document.getElementById('clientDetailView').style.display = 'none';
   document.getElementById('clientListView').style.display = 'block';
-  document.getElementById('mainTitle').textContent = 'Client Data Management Dashboard';
+  document.getElementById('mainTitle').textContent = 'LLC Client Data Management Dashboard';
   
   loadClientData(); // Reload the client list
 }
@@ -449,7 +450,6 @@ function editSection(sectionId) {
   });
 }
 
-// ✅ HELPER FUNCTION: Moved to global scope to be accessible by updateClientSectionData
 // Firestore does not allow field names with spaces or periods. This helper sanitizes them.
 function sanitizeFirestoreKeys(obj) {
   const sanitized = {};
@@ -461,7 +461,6 @@ function sanitizeFirestoreKeys(obj) {
   return sanitized;
 }
 
-// ✅ CORRECTED FUNCTION: Now properly handles the asynchronous update operation
 function saveSection(sectionId) {
   const section = document.getElementById(sectionId + '-section');
   if (!section) return;
@@ -570,10 +569,9 @@ function showCopyFormatNotification() {
   }, 4000);
 }
 
-// ✅ CORRECTED FUNCTION: Now correctly returns the promise chain
 function updateClientSectionData(sectionId, updatedData) {
-  // Get the current client document
-  return db.collection('owners').doc(ownerUniqueId).collection('clients').doc(currentClientId).get()
+  // UPDATED: Get the current client document from the form-specific collection
+  return db.collection('owners').doc(ownerUniqueId).collection(`${FORM_TYPE}_clients`).doc(currentClientId).get()
     .then((doc) => {
       if (doc.exists) {
         const client = doc.data();
@@ -782,7 +780,8 @@ function updateClientSectionData(sectionId, updatedData) {
         
         // Sanitize keys and return the update promise
         const sanitizedClient = sanitizeFirestoreKeys(client);
-        return db.collection('owners').doc(ownerUniqueId).collection('clients').doc(currentClientId).update(sanitizedClient);
+        // UPDATED: Update the document in the form-specific collection
+        return db.collection('owners').doc(ownerUniqueId).collection(`${FORM_TYPE}_clients`).doc(currentClientId).update(sanitizedClient);
       } else {
         // If doc doesn't exist, reject the promise
         return Promise.reject('Client document not found');
