@@ -476,5 +476,6 @@ function debugUserData() {
     }
 }
 
+
 // Make the debug function available globally
 window.debugUserData = debugUserData;
