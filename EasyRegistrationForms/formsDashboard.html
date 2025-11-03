@@ -5,115 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Form Portal</title>
   <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f3f6fb;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f3f6fb;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
 
-    /* ===== HEADER ===== */
+  /* ===== HEADER ===== */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #004aad;
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  header button {
+    background: #e60054;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  header button:hover {
+    background: #1aff84;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  /* ===== CONTAINER ===== */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 50px 70px;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  /* ===== CARD ===== */
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 30px 20px 45px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #004aad;
+  }
+
+  .card button {
+    background: #004aad;
+    color: white;
+    padding: 16px 38px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .card button:hover {
+    background: #003080;
+    transform: scale(1.07);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #e9ecef;
+    text-align: center;
+    padding: 25px;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 50px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #004aad;
-      color: white;
-      padding: 15px 30px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
+    .container {
+      padding: 25px;
     }
 
     header button {
-      background: #e60054;
-      border: none;
-      border-radius: 6px;
-      padding: 10px 20px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      cursor: pointer;
-      color: #000;
-      transition: background 0.3s ease;
-    }
-
-    header button:hover {
-      background: #1aff84;
-    }
-
-    /* ===== CONTAINER ===== */
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      padding: 40px 60px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* ===== CARD ===== */
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      padding: 25px 15px 35px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    }
-
-    .card h2 {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #004aad;
+      margin-top: 10px;
+      width: 100%;
     }
 
     .card button {
-      background: #004aad;
-      color: white;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
+      width: 100%;
     }
+  }
+</style>
 
-    .card button:hover {
-      background: #003080;
-      transform: scale(1.05);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #e9ecef;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.95rem;
-      color: #555;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .container {
-        padding: 20px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>

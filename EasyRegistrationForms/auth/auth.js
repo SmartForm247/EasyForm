@@ -1,4 +1,4 @@
-// Firebase Configuration (same as app.js)
+// Firebase Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBzSHkVxRiLC5gsq04LTTDnXaGdoF7eJ2c",
     authDomain: "easyregistrationforms.firebaseapp.com",
@@ -23,9 +23,12 @@ const loadingSpinner = document.getElementById('loadingSpinner');
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     // Check if user is already logged in
+    showLoading(true);
     auth.onAuthStateChanged(user => {
         if (user) {
             window.location.href = '../../index.html';
+        } else {
+            showLoading(false);
         }
     });
 
@@ -62,9 +65,9 @@ function showNotification(message, type) {
 
 function showLoading(show) {
     if (show) {
-        loadingSpinner.classList.add('active');
+        loadingSpinner.style.display = 'flex';
     } else {
-        loadingSpinner.classList.remove('active');
+        loadingSpinner.style.display = 'none';
     }
 }
 
@@ -162,8 +165,12 @@ function signup() {
             // Generate unique ID for the owner
             const uniqueId = generateUniqueId(firstName, email);
             
-            // Create shareable link
-            const shareableLink = `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`;
+            // Create multiple form links
+            const formLinks = {
+                llc: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`,
+                sole: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/sole-input-form.html?owner=${uniqueId}`,
+                ngo: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/ngo-input-form.html?owner=${uniqueId}`
+            };
             
             // Create user record in Firestore
             const userData = {
@@ -171,9 +178,15 @@ function signup() {
                 email: email,
                 phone: phone, // IMPORTANT: Save phone number
                 uniqueId: uniqueId,
-                shareableLink: shareableLink,
+                formLinks: formLinks,
                 credit_balance: 0,
                 usage_count: 0,
+                // Track usage by form type
+                formUsage: {
+                    llc: 0,
+                    sole: 0,
+                    ngo: 0
+                },
                 transactions: [],
                 created_at: firebase.firestore.FieldValue.serverTimestamp()
             };
@@ -186,7 +199,7 @@ function signup() {
                     showLoading(false);
                     showNotification('Account created successfully!', 'success');
                     setTimeout(() => {
-                       window.location.href = '../../../index.html';
+                       window.location.href = '../../index.html';
                     }, 1500);
                 })
                 .catch((error) => {
