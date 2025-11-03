@@ -58,15 +58,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('viewSubmissionsBtn')?.addEventListener('click', () => {
-        window.location.href = 'llc-dashboard.html';
+        window.location.href = 'EasyRegistrationForms/formsDashboard.html';
     });
 
-    // Copy Link Button
-    document.getElementById('copyLinkBtn')?.addEventListener('click', () => {
-        const shareableLink = document.getElementById('shareableLink').value;
+    // Copy Link Buttons - One for each form type
+    document.getElementById('copyLinkBtn1')?.addEventListener('click', () => {
+        const shareableLink = document.getElementById('LLCDataLink').value;
         navigator.clipboard.writeText(shareableLink)
             .then(() => {
-                showNotification('Link copied to clipboard!', 'success');
+                showNotification('LLC link copied to clipboard!', 'success');
+            })
+            .catch(err => {
+                showNotification('Failed to copy link', 'error');
+            });
+    });
+
+    document.getElementById('copyLinkBtn2')?.addEventListener('click', () => {
+        const shareableLink = document.getElementById('SoleDataLink').value;
+        navigator.clipboard.writeText(shareableLink)
+            .then(() => {
+                showNotification('Sole Proprietorship link copied to clipboard!', 'success');
+            })
+            .catch(err => {
+                showNotification('Failed to copy link', 'error');
+            });
+    });
+
+    document.getElementById('copyLinkBtn3')?.addEventListener('click', () => {
+        const shareableLink = document.getElementById('NGODataLink').value;
+        navigator.clipboard.writeText(shareableLink)
+            .then(() => {
+                showNotification('NGO link copied to clipboard!', 'success');
             })
             .catch(err => {
                 showNotification('Failed to copy link', 'error');
@@ -174,18 +196,31 @@ function loadUserData() {
             } else {
                 console.log('User document not found, creating new one.');
                 
-                // Generate unique ID and shareable link for new users
+                // Generate unique ID and shareable links for new users
                 const email = currentUser.email;
                 const firstName = email.split('@')[0]; // Use email prefix as default first name
                 const uniqueId = generateUniqueId(firstName, email);
+                
+                // Create multiple form links
+                const formLinks = {
+                    llc: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`,
+                    sole: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/sole-input-form.html?owner=${uniqueId}`,
+                    ngo: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/ngo-input-form.html?owner=${uniqueId}`
+                };
                 
                 const userData = {
                     email: email,
                     firstName: firstName,
                     uniqueId: uniqueId,
-                    shareableLink: 'Generating link...', // IMPORTANT: Placeholder first
+                    formLinks: formLinks,
                     credit_balance: 0,
                     usage_count: 0,
+                    // Track usage by form type
+                    formUsage: {
+                        llc: 0,
+                        sole: 0,
+                        ngo: 0
+                    },
                     transactions: [],
                     created_at: firebase.firestore.FieldValue.serverTimestamp()
                 };
@@ -195,14 +230,11 @@ function loadUserData() {
                 // Update the UI with the placeholder first
                 updateDashboard(userData);
                 
-                // Now, create the shareable link and save everything to Firestore
-                const shareableLink = `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${uniqueId}`;
-                userData.shareableLink = shareableLink; // Update the object with the real link
-
+                // Save everything to Firestore
                 userDocRef.set(userData)
                     .then(() => {
-                        console.log('New user document created with link.');
-                        // Update the dashboard AGAIN now that the link is real and saved
+                        console.log('New user document created with links.');
+                        // Update the dashboard AGAIN now that the links are saved
                         updateDashboard(userData);
                     })
                     .catch((error) => {
@@ -284,43 +316,90 @@ function updateDashboard(userData) {
         balanceElement.textContent = `${userData.credit_balance || 0} GHS`;
     }
     
-    // Update usage count
+    // Update total usage count
     const usageElement = document.getElementById('usageCount');
     if (usageElement) {
         usageElement.textContent = userData.usage_count || 0;
     }
     
-    // Update free submissions
-    const freeSubmissions = Math.max(0, 2 - (userData.usage_count || 0));
+    // Update free submissions - calculate based on total usage across all forms
+    const totalUsage = userData.formUsage ? 
+        (userData.formUsage.llc || 0) + (userData.formUsage.sole || 0) + (userData.formUsage.ngo || 0) : 
+        (userData.usage_count || 0);
+    const freeSubmissions = Math.max(0, 2 - totalUsage);
     const freeSubmissionsElement = document.getElementById('freeSubmissions');
     if (freeSubmissionsElement) {
         freeSubmissionsElement.textContent = freeSubmissions;
     }
     
-    // Update shareable link - This is the key part
-    const shareableLinkElement = document.getElementById('shareableLink');
-    if (shareableLinkElement) {
-        // Check if shareableLink exists in userData
-        if (userData.shareableLink) {
-            shareableLinkElement.value = userData.shareableLink;
-            console.log('Shareable link set to:', userData.shareableLink);
-        } else if (userData.uniqueId) {
-            // If shareableLink doesn't exist but uniqueId does, create the link
-            const shareableLink = `https://smartform247.github.io/EasyForm/EasyRegistrationForms/llc-input-form.html?owner=${userData.uniqueId}`;
-            shareableLinkElement.value = shareableLink;
-            
-            // Update the user document with the shareable link
-            db.collection('users').doc(currentUser.uid).update({
-                shareableLink: shareableLink
-            }).then(() => {
-                console.log('Shareable link updated in Firestore');
-            }).catch(error => {
-                console.error('Error updating shareable link:', error);
-            });
-        } else {
-            // If neither exists, show a placeholder
-            shareableLinkElement.value = 'Generating link...';
-            console.warn('No uniqueId found for user');
+    // Update form links - This is the key part for multiple forms
+    if (userData.formLinks) {
+        // LLC Form Link
+        const llcLinkElement = document.getElementById('LLCDataLink');
+        if (llcLinkElement) {
+            llcLinkElement.value = userData.formLinks.llc || 'Generating link...';
+            console.log('LLC link set to:', userData.formLinks.llc);
+        }
+        
+        // Sole Proprietorship Form Link
+        const soleLinkElement = document.getElementById('SoleDataLink');
+        if (soleLinkElement) {
+            soleLinkElement.value = userData.formLinks.sole || 'Generating link...';
+            console.log('Sole link set to:', userData.formLinks.sole);
+        }
+        
+        // NGO Form Link
+        const ngoLinkElement = document.getElementById('NGODataLink');
+        if (ngoLinkElement) {
+            ngoLinkElement.value = userData.formLinks.ngo || 'Generating link...';
+            console.log('NGO link set to:', userData.formLinks.ngo);
+        }
+    }
+    
+    // Handle backward compatibility for users with single shareableLink
+    else if (userData.shareableLink) {
+        // Create formLinks object from existing shareableLink
+        const uniqueId = userData.uniqueId;
+        const formLinks = {
+            llc: userData.shareableLink,
+            sole: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/sole-input-form.html?owner=${uniqueId}`,
+            ngo: `https://smartform247.github.io/EasyForm/EasyRegistrationForms/ngo-input-form.html?owner=${uniqueId}`
+        };
+        
+        // Initialize formUsage if it doesn't exist
+        const formUsage = userData.formUsage || {
+            llc: userData.usage_count || 0,
+            sole: 0,
+            ngo: 0
+        };
+        
+        // Update the user document with the new structure
+        db.collection('users').doc(currentUser.uid).update({
+            formLinks: formLinks,
+            formUsage: formUsage
+        }).then(() => {
+            console.log('User document updated with new form structure');
+            // Reload the data to update the UI
+            loadUserData();
+        }).catch(error => {
+            console.error('Error updating user document:', error);
+        });
+        
+        // Update the UI with the existing LLC link
+        const llcLinkElement = document.getElementById('LLCDataLink');
+        if (llcLinkElement) {
+            llcLinkElement.value = userData.shareableLink;
+        }
+        
+        // Generate and set the other links
+        const soleLinkElement = document.getElementById('SoleDataLink');
+        if (soleLinkElement) {
+            soleLinkElement.value = formLinks.sole;
+        }
+        
+        const ngoLinkElement = document.getElementById('NGODataLink');
+        if (ngoLinkElement) {
+            ngoLinkElement.value = formLinks.ngo;
         }
     }
     
@@ -462,8 +541,8 @@ function debugUserData() {
             .then((doc) => {
                 if (doc.exists) {
                     console.log('User data from Firestore:', doc.data());
-                    console.log('Shareable link:', doc.data().shareableLink);
-                    console.log('Unique ID:', doc.data().uniqueId);
+                    console.log('Form links:', doc.data().formLinks);
+                    console.log('Form usage:', doc.data().formUsage);
                 } else {
                     console.log('No user document found');
                 }
@@ -475,7 +554,6 @@ function debugUserData() {
         console.log('No current user');
     }
 }
-
 
 // Make the debug function available globally
 window.debugUserData = debugUserData;

@@ -67,7 +67,6 @@
             <h2>Dashboard</h2>
             <div>
               <span class="me-3">Welcome, <span id="userName">User</span></span>
-            
             </div>
           </div>
         </div>
@@ -93,29 +92,72 @@
 
         <!-- Right Column -->
         <div class="col-md-8">
-          <!-- Shareable Link -->
+          <!-- Shareable Links -->
           <div class="dashboard-card">
-            <h5 class="mb-3">Your Shareable Link</h5>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" id="shareableLink" readonly>
-              <button class="btn btn-outline-primary" type="button" id="copyLinkBtn">
-                <i class="fas fa-copy me-1"></i>Copy
-              </button>
+            <h5 class="mb-3">Your Data Collection Links</h5>
+            
+            <!-- Form Links Tabs -->
+            <ul class="nav nav-tabs mb-3" id="formTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="llc-tab" data-bs-toggle="tab" data-bs-target="#llc" type="button" role="tab" aria-controls="llc" aria-selected="true">LLC</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sole-tab" data-bs-toggle="tab" data-bs-target="#sole" type="button" role="tab" aria-controls="sole" aria-selected="false">Sole Proprietorship</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ngo-tab" data-bs-toggle="tab" data-bs-target="#ngo" type="button" role="tab" aria-controls="ngo" aria-selected="false">NGO</button>
+              </li>
+            </ul>
+            
+            <!-- Tab Content -->
+            <div class="tab-content" id="formTabsContent">
+              <!-- LLC Tab -->
+              <div class="tab-pane fade show active" id="llc" role="tabpanel" aria-labelledby="llc-tab">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="LLCDataLink" readonly>
+                  <button class="btn btn-outline-primary" type="button" id="copyLinkBtn1">
+                    <i class="fas fa-copy me-1"></i>Copy
+                  </button>
+                </div>
+               
+              </div>
+              
+              <!-- Sole Proprietorship Tab -->
+              <div class="tab-pane fade" id="sole" role="tabpanel" aria-labelledby="sole-tab">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="SoleDataLink" readonly>
+                  <button class="btn btn-outline-primary" type="button" id="copyLinkBtn2">
+                    <i class="fas fa-copy me-1"></i>Copy
+                  </button>
+                </div>
+              
+              </div>
+              
+              <!-- NGO Tab -->
+              <div class="tab-pane fade" id="ngo" role="tabpanel" aria-labelledby="ngo-tab">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="NGODataLink" readonly>
+                  <button class="btn btn-outline-primary" type="button" id="copyLinkBtn3">
+                    <i class="fas fa-copy me-1"></i>Copy
+                  </button>
+                </div>
+                
+              </div>
             </div>
-            <p class="text-muted">
-              Share this link with clients to collect their business registration information.
+
+            <p class="text-muted mt-3">
+              Share these links with clients to collect their business registration information.
             </p>
           </div>
 
-            <div class="dashboard-card">
-                        <h5 class="mb-3">Quick Actions</h5>
+          <div class="dashboard-card">
+            <h5 class="mb-3">Quick Actions</h5>
             <div class="d-grid gap-2">
               <a href="EasyRegistrationForms/formsDashboard.html" class="btn btn-outline-primary" id="viewSubmissionsBtn">
                 <i class="fas fa-list me-2"></i>View Registration Forms
               </a>
             </div>
           </div>
-
 
           <!-- Recent Transactions -->
           <div class="dashboard-card">
@@ -130,9 +172,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Quick Actions -->
-          
         </div>
       </div>
     </div>

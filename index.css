@@ -34,7 +34,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-link {
-  color: #f0f0f0 !important;
+  background-color: #12a147 !important;
+  color: #0a2351;
   margin-right: 15px;
   font-weight: 500;
   transition: color 0.3s;
@@ -42,19 +43,58 @@ h1, h2, h3, h4, h5 {
 
 .nav-link:hover {
   color: #00e676 !important;
+  background-color: #0a2351 !important;
 }
+
+.nav-link.active {
+  color: #00e676 !important;
+  font-weight: 600;
+}
+
+/* ============================
+   TAB STYLING
+============================ */
+.nav-tabs {
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 1rem;
+}
+
+.nav-tabs .nav-link {
+  color: #0a2351;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+  border-bottom: 2px solid #00e676;
+  color: #0a2351;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0a2351;
+  background-color: transparent;
+  border-bottom: 2px solid #00e676;
+  font-weight: 600;
+}
+
+.tab-content {
+  padding-top: 0.5rem;
+}
+
 /* Compact and elegant outline button */
 .btn-outline-primary {
   border-color: #00e676;
   background-color: #00e676;
- color: #0a2351;
+  color: #0a2351;
   padding: 10px 25px;         /* Reduced height */
   font-size: 1.5rem;        /* Slightly smaller text */
   font-weight: 500;
   line-height: 1.4;
   border-radius: 6px;
   transition: all 0.3s ease;
-
 }
 
 .btn-outline-primary i {
@@ -252,7 +292,13 @@ textarea.form-control:focus {
   .credit-balance {
     font-size: 1.3rem;
   }
+  
+  .nav-tabs .nav-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
 }
+
 /* Toggle button (☰) */
 .toggle-btn {
   background: none;
@@ -284,4 +330,27 @@ textarea.form-control:focus {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form usage statistics styling */
+.usage-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.usage-stats span {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.usage-count {
+  background-color: #e9f5ff;
+  color: #0a2351;
+}
+
+.free-submissions {
+  background-color: #e9fdf1;
+  color: #00e676;
 }
