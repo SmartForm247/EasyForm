@@ -99,14 +99,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-accent {
-  background-color: #ffb400;
+   background-color:green;
   color: #fff;
   border: none;
 }
 
 .btn-accent:hover {
   color: white;
-  background-color: #e0a000;
+  background-color:green;
 }
 
 .btn-outline-primary {
@@ -133,13 +133,13 @@ h1, h2, h3, h4, h5 {
 ========================== */
 .nav-tabs .nav-link {
   margin-right: 5px;
-   background-color: #e0a000;
+   background-color:green;
   color:white;
   border: 1px solid transparent;
 }
 
 .nav-tabs .nav-link.active {
-  background-color: #00984a;
+  background-color: #0b140f;
   color: #fff;
   border-color: #00984a;
 }

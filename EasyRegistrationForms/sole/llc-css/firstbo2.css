@@ -1,0 +1,243 @@
+.page {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+}
+
+.checkmark-1 {
+    top: 103px;
+    left: 360px;
+    width: 14px;
+    height: 12px;
+}
+
+.companyName3 {
+    top: 215px;
+    left: 35px;
+    width: 355px;
+}
+
+.static-1 {
+    top: 255px;
+    left: 465px;
+    width: 145px;
+}
+
+.Fbo2FirstName {
+    top: 330px;
+    left: 65px;
+    width: 245px;
+}
+
+.Fbo2Surname {
+    top: 330px;
+    left: 465px;
+    width: 245px;
+}
+
+.Fbo2Previousname {
+    top: 380px;
+    left: 65px;
+    width: 245px;
+}
+
+.Fbo2DOB {
+    top: 380px;
+    left: 465px;
+    width: 245px;
+}
+
+.Fbo2Nationality {
+    top: 410px;
+    left: 520px;
+    width: 215px;
+}
+
+.Fbo2POB {
+    top: 409px;
+    left: 175px;
+    width: 210px;
+}
+
+.Fbo2Address1 {
+    top: 470px;
+    left: 65px;
+    width: 285px;
+}
+
+.Fbo2Address2 {
+    top: 470px;
+    left: 465px;
+    width: 285px;
+}
+
+.Fbo2GPS {
+    top: 555px;
+    left: 140px;
+    width: 145px;
+}
+
+.Fbo2Tin {
+    top: 555px;
+    left: 465px;
+    width: 245px;
+}
+
+.Fbo2PhoneNumber {
+    top: 599px;
+    left: 140px;
+    width: 145px;
+}
+
+.Fb02Email {
+    top: 599px;
+    left: 450px;
+    width: 300px;
+}
+
+.static-2 {
+    top: 640px;
+    left: 140px;
+    width: 145px;
+}
+
+.Fb02GhNumber {
+    top: 640px;
+    left: 475px;
+    width: 200px;
+}
+
+.Fbo2PlaceOfWork {
+    top: 690px;
+    left: 475px;
+    width: 280px;
+}
+
+.static-3 {
+    top: 690px;
+    left: 140px;
+    width: 145px;
+}
+
+.date3 {
+    top: 713px;
+    left: 230px;
+    width: 260px;
+    font-size: 25px;
+}
+
+.checkmark-2 {
+    top: 836px;
+    left: 460px;
+    width: 14px;
+    height: 15px;
+}
+
+.checkmark-3 {
+    top: 160px;
+    left: 473px;
+    width: 23px;
+}
+
+.Fbo2Directpercent {
+    top: 211px;
+    left: 448px;
+    width: 100px;
+    font-size: 16px;
+}
+
+.Fbo2votinRight {
+    top: 326px;
+    left: 408px;
+    width: 100px;
+    font-size: 16px;
+}
+
+.Fbo2Indirectpercent {
+    top: 249px;
+    left: 448px;
+    width: 100px;
+    font-size: 16px;
+}
+
+.checkmark-4 {
+    top: 290px;
+    left: 481px;
+    width: 9px;
+}
+
+.checkmark-5 {
+    top: 411px;
+    left: 331px;
+    width: 9px;
+}
+
+.checkmark-6 {
+    top: 360px;
+    left: 531px;
+    width: 9px;
+}
+
+.checkmark-7 {
+    top: 500px;
+    left: 331px;
+    width: 9px;
+}
+
+.Fb02directorName {
+    top: 688px;
+    left: 195px;
+    width: 235px;
+}
+
+.dir1-signature {
+    top: 666px;
+    left: 520px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}
+
+.static-4 {
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: 730px;
+    left: 195px;
+    width: 185px;
+}
+
+.date4 {
+ 
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: 729px;
+    left: 500px;
+    width: 220px;
+}
+
+.Fbo2secretaryName {
+    top: 819px;
+    left: 125px;
+    width: 295px;
+}
+
+.dir1-signature-2 {
+    top: 805px;
+    left: 510px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}
+
+.static-5 {
+    top: 879px;
+    left: 195px;
+    width: 200px;
+}
+
+.date5 {
+    border-bottom: 2px solid rgb(122, 114, 114);
+    top: 883px;
+    left: 500px;
+    width: 230px;
+}

@@ -1,0 +1,599 @@
+
+.companyName8 {
+  top: 178px;
+  left: 169px;
+  width: 380px;
+  border-top: 1px solid rgb(124, 117, 117);
+  border-bottom: 1px solid rgb(124, 117, 117);
+  position: absolute;
+}
+.director3label {
+ 
+    left: 745px;
+    top: 269px;
+    width:38px !important;  /* Adjust width as needed */
+    visibility: visible !important;  /* Ensures it's not hidden */
+    opacity: 1 !important;  /* Ensures it's fully visible */
+    z-index: 9999 !important;  /* Brings it on top of other elements */
+  
+}
+.chk1-3 {
+  top: 313px;
+  left: 362px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+.chk2-3 {
+  top: 351px;
+  left: 363px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+.chk3-3 {
+  top: 407px;
+  left: 363px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+.chk4-3 {
+  top: 426px;
+  left: 265px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+
+
+
+
+.D3TittleMR {
+    top: 444px;
+    left: 194px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3TittleMRS {
+    top: 444px;
+    left: 267.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3TittleMISS {
+    top: 444px;
+    left: 385px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3TittleMS {
+    top: 444px;
+    left: 457px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3TittleDR {
+    top: 444px;
+    left: 529px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3FirstName {
+    top: 461.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+.D3MiddleName {
+    top: 481px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D3LastName {
+    top: 500px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D3FormerName {
+    top: 518px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3genderMale {
+    top: 538px;
+    left: 241px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3genderFemale {
+    top: 538px;
+    left: 338px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D3DOB {
+    top: 556px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D3POB {
+    top: 575px;
+    left: 193px;
+    width: 383px;
+    
+    position: absolute;
+}
+
+.D3Nationality {
+    top: 593.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3Occupation {
+    top: 612px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D3PhoneNO1 {
+    top: 631.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3PhoneNO2 {
+    top: 650.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3Email {
+    top: 687.5px;
+    left: 193px;
+    width: 383px;
+    
+    position: absolute;
+}
+
+.D3TIN {
+    top: 706px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3GhanaCard {
+    top: 725px;
+    left: 330px;
+    width: 238px;
+    position: absolute;
+}
+
+.D3DigitalAddress {
+    top: 782px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3Landmark {
+    top: 800px;
+    left: 193px;
+    width: 383px;
+    
+    position: absolute;
+}
+
+.D3housenumber {
+    top: 819px;
+    left: 193px;
+    width: 123px;
+    position: absolute;
+}
+
+.D3town {
+    top: 819px;
+    left: 352px;
+    width: 223px;
+    position: absolute;
+}
+
+.D3StreetName {
+    top: 858px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3City {
+    top: 876px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3District {
+    top: 895px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D3Region {
+    top: 913px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D3Country {
+
+    top: 932.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+/* --DIRECTOR 4-- this is for page 22 ---- */
+
+.sameasabove1 {
+    top: 80px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    font-size: 23px;
+    position: absolute;
+}
+
+#D3Signature {
+    top: 219px;
+    left: 290px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+/* --DIRECTOR 4-- information- */
+.director4label {
+    left: 745px;
+    top: 390px;
+    width:38px !important;  /* Adjust width as needed */
+    visibility: visible !important;  /* Ensures it's not hidden */
+    opacity: 1 !important;  /* Ensures it's fully visible */
+    z-index: 9999 !important;  /* Brings it on top of other elements */
+   
+}
+.chk1-4 {
+  top: 390px;
+  left: 362px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+.chk2-4 {
+  top: 428px;
+  left: 363px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+.chk3-4 {
+  top: 485px;
+  left: 363px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+.chk4-4 {
+  top: 502px;
+  left: 266px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+}
+
+
+.D4TittleMR {
+    top: 521px;
+    left: 196px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D4TittleMRS {
+    top: 521px;
+    left: 267px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D4TittleMISS {
+    top:521px;
+    left: 385px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D4TittleMS {
+    top: 521px;
+    left: 458px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D4TittleDR {
+    top: 521px;
+    left: 530px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D4FirstName {
+    top: 539px;
+    left: 193px;
+    width: 383px;
+    border-top: 1px solid rgb(124,117,117);
+    position: absolute;
+}
+
+.D4MiddleName {
+    top: 558px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D4LastName {
+    top: 576.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4FormerName {
+    top: 595px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4genderMale {
+    top: 616px;
+    left: 241px;
+    width: 14px;
+   
+    position: absolute;
+}
+
+.D4genderFemale {
+    top: 616px;
+    left: 338px;
+    width: 14px;
+    
+    position: absolute;
+}
+
+.D4DOB {
+    top: 634px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4POB {
+    top: 653px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D4Nationality {
+    top: 671px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4Occupation {
+    top: 690px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4PhoneNO1 {
+    top: 709px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D4PhoneNO2 {
+    top: 728px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4Email {
+    top: 765.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4TIN {
+    top: 784.5px;
+    left: 193px;
+    width: 383px;
+    
+    position: absolute;
+}
+
+.D4GhanaCard {
+    top: 803.5px;
+    left: 330px;
+    width: 238px;
+
+    position: absolute;
+}
+
+.D4DigitalAddress {
+    top: 860px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D4Landmark {
+    top: 878px;
+    left: 193px;
+    width: 383px;
+    
+    position: absolute;
+}
+
+.D4housenumber {
+    top: 898px;
+    left: 193px;
+    width: 123px;
+    position: absolute;
+}
+
+.D4town {
+    top: 898px;
+    left: 352px;
+    width: 223px;
+    position: absolute;
+}
+
+.D4StreetName {
+    top: 917px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D4City {
+    top: 936px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4District {
+    top: 953.5px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.D4Region {
+    top: 972px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D4Country {
+
+    top: 12px;
+    left: 193px;
+    width: 383px;
+ 
+    position: absolute;
+}
+
+/* ---- this is for page 22 ---- */
+
+.sameasabove2 {
+    top: 130px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    font-size: 23px;
+    position: absolute;
+}
+
+.D4Signature {
+    top: 219px;
+    left: 290px;
+    width: 157px;
+   
+    padding-top: 15px;
+    position: absolute;
+}
+
+/* --DIRECTOR 4-- information- */
+.director5label {
+
+    left: 745px;
+    top: 300px;
+    width:38px !important;  /* Adjust width as needed */
+    visibility: visible !important;  /* Ensures it's not hidden */
+    opacity: 1 !important;  /* Ensures it's fully visible */
+    z-index: 9999 !important;  /* Brings it on top of other elements */
+   
+}
+
+/* --DIRECTOR 4-- information- */
+.director6label {
+    left: 745px;
+    top: 350px;
+    width:38px !important;  /* Adjust width as needed */
+    visibility: visible !important;  /* Ensures it's not hidden */
+    opacity: 1 !important;  /* Ensures it's fully visible */
+    z-index: 9999 !important;  /* Brings it on top of other elements */
+   
+}

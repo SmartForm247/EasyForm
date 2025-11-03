@@ -1,0 +1,1535 @@
+/* ---- this is for pge one ---- */
+/* Checkbox styles */
+.registeredCon {
+    top: 173px;
+    left: 314.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.standardCon {
+    top: 173px;
+    left: 529.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+/* Company Name */
+.companyName1 {
+    top: 247.5px;
+    left: 169px;
+    width: 380px;
+    position: absolute;
+}
+
+
+
+/* LTD checkbox */
+.endWithLTD {
+    top: 380px;
+    left: 194.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+/* LIMITED checkbox */
+.endWithLIMITED {
+    top: 380px;
+    left: 361.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+/* Presented by */
+.presentedBy {
+    top: 398.5px;
+    left: 169px;
+    width: 380px;
+    position: absolute;
+}
+
+/* Presenter TIN */
+.presenterTIN {
+    top: 436px;
+    left: 336.5px;
+    width: 205px;
+    position: absolute;
+}
+
+/* Principal Activities */
+.principalActivities {
+    top: 850px;
+    left: 26px;
+    width: 563px;
+    position: absolute;
+}
+
+
+
+/* ---- this is for page two ---- */
+
+.officedigital-address {
+    top: 29px;
+    left: 193px;
+    width: 180px;
+    position: absolute;
+}
+
+.officeLandmark {
+    top: 48px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+.officehousenumber {
+    top: 67px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.officetown {
+    top: 85.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.officeStreet {
+    top: 104px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.officeCity {
+    top: 142.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.officeDistrict {
+    top: 161px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.officeRegion {
+    top: 180px;
+    left: 193px;
+    width: 383px;
+   
+    position: absolute;
+}
+
+#checkbox1 {
+    top: 237px;
+    left: 338px;
+    width: 14px;
+    height: 14px;
+   
+    position: absolute;
+}
+
+#sameasabove {
+    top: 300px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    position: absolute;
+    font-size: 23px;
+}
+
+#sameasabove2 {
+    top: 490px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    position: absolute;
+    font-size: 23px;
+}
+
+#sameasabove3 {
+    top: 670px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    position: absolute;
+    font-size: 23px;
+}
+
+.emptyBox1 {
+    top: 802px;
+    left: 265px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.emptyBox2 {
+    top: 802px;
+    left: 362px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.emptyBox3 {
+    top: 802px;
+    left: 435px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#OfficeBoxNumber {
+    top: 820px;
+    left: 193px;
+    width: 90px;
+   
+    position: absolute;
+}
+
+#PMB {
+    top: 820px;
+    left: 289px;
+    width: 90px;
+    position: absolute;
+}
+
+#DTD {
+    top: 820px;
+    left: 385px;
+    width: 90px;
+    position: absolute;
+}
+
+.OfficeBoxNumberTown {
+    top: 839.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.OfficeBoxNumberRegion {
+    top: 858px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.OfficeContactOne {
+    top: 895.8px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.OfficeContactTwo {
+    top: 914.3px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+
+/* ---- this is for page three ---- */
+
+.Officeemail {
+    top: 29.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+#chk1 {
+    top: 162px;
+    left: 362.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#chk2 {
+    top: 200px;
+    left: 362.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#chk3 {
+    top: 256px;
+    left: 362.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#chk4 {
+    top: 275px;
+    left: 265.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1tittleMR {
+    top: 294px;
+    left: 242px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1tittleMRS {
+    top: 294px;
+    left: 338.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1tittleMISS {
+    top: 294px;
+    left: 434px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1tittleMS {
+    top: 294px;
+    left: 505px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1tittleDR {
+    top: 294px;
+    left: 580px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1FirstName {
+    top: 311.8px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1MiddleName {
+    top: 330.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1LastName {
+    top: 349.9px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1FormerName {
+    top: 368.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1GenderMale {
+    top: 389px;
+    left: 242.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1GenderFemale {
+    top: 389px;
+    left: 338.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D1DOB {
+    top: 406.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1POB {
+    top: 425px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1Nationality {
+    top: 443.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1Occupation {
+    top: 463px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1PhoneNO1 {
+    top: 481.2px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1PhoneNO2 {
+    top: 499.9px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1Email {
+    top: 537.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D1TIN {
+    top: 556.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1GhanaCard {
+    top: 576px;
+    left: 285px;
+    width: 288px;
+    position: absolute;
+}
+
+.D1DigitalAddress {
+    top: 632px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1Landmark {
+    top: 650.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D1housenumber {
+    top: 668.9px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1town {
+    top: 688px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.D1StreetName {
+    top: 706.5px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+
+}
+
+.D1City {
+    top: 745.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D1District {
+    top: 763.9px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D1Region {
+    top: 782.9px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D1Country {
+    top: 801.5px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+#sameaabove {
+    top: 870px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    position: absolute;
+    font-size: 23px;
+}
+
+/* ---- this is for page four ---- */
+
+#D1signature {
+    top: 155px;
+    left: 290px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+#chk1-2 {
+    top: 313px;
+    left: 362px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#chk2-2 {
+    top: 351px;
+    left: 363px;
+    height: 14px;
+    position: absolute;
+}
+
+#chk3-2 {
+    top: 407px;
+    left: 363px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#chk4-2 {
+    top: 426px;
+    left: 265px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2TittleMR {
+    top: 445.5px;
+    left: 243px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2TittleMRS {
+    top: 445.5px;
+    left: 337.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2TittleMISS {
+    top: 445.5px;
+    left: 435px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2TittleMS {
+    top: 445.5px;
+    left: 506px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2TittleDR {
+    top: 445.5px;
+    left: 578px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2FirstName {
+    top: 463.1px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2MiddleName {
+    top: 482px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2LastName {
+    top: 499.999999px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2FormerName {
+    top: 518.9px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+.D2genderMale {
+    top: 538px;
+    left: 241px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2genderFemale {
+    top: 538px;
+    left: 338px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.D2DOB {
+    top: 556.6px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2POB {
+    top: 575.6px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2Nationality {
+    top: 593.89px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2Occupation {
+    top: 612.599px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2PhoneNO1 {
+    top: 631.8px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+.D2PhoneNO2 {
+    top: 651px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+.D2Email {
+    top: 688px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2TIN {
+    top: 707px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2GhanaCard {
+    top: 726.5px;
+    left: 285px;
+    width: 288px;
+  
+
+    position: absolute;
+}
+
+.D2DigitalAddress {
+    top: 783px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2Landmark {
+    top: 802px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2housenumber {
+    top: 820.5px;
+    left: 193px;
+    width: 123px;
+    position: absolute;
+}
+
+.D2town {
+    top: 820.5px;
+    left: 352px;
+    width: 223px;
+    position: absolute;
+}
+
+.D2StreetName {
+    top: 839.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2City {
+    top: 857.7px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2District {
+    top: 876.6px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2Region {
+    top: 895.77px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.D2Country {
+    top: 914.5px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+/* ---- this is for page five ---- */
+
+#sameasabov {
+    top: 80px;
+    left: 292px;
+    width: 200px;
+    transform: rotate(-25deg);
+    font-size: 23px;
+    position: absolute;
+}
+
+#D2Signature {
+    top: 219px;
+    left: 290px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+/* Checkboxes (unlabeled ones in a vertical list) */
+.chk5_1 { top: 293px; left: 505px; width: 13px; height: 12px; position: absolute; }
+.chk5_2 { top: 313px; left: 505px; width: 13px; height: 12px; position: absolute; }
+.chk5_3 { top: 332px; left: 505px; width: 13px; height: 12px; position: absolute; }
+.chk5_4 { top: 352px; left: 505px; width: 13px; height: 12px; position: absolute; }
+.chk5_5 { top: 370px; left: 505px; width: 13px; height: 12px; position: absolute; }
+.chk5_6 { top: 389px; left: 505px; width: 13px; height: 12px; position: absolute; }
+#chk5_7 { top: 407px; left: 505px; width: 13px; height: 12px; position: absolute; }
+
+.secTittleMR { top: 482px; left: 242px; width: 14px; height: 14px; position: absolute; }
+.secTittleMRS { top: 482px; left: 337.5px; width: 14px; height: 14px; position: absolute; }
+.secTittleMISS { top: 482px; left: 435px; width: 14px; height: 14px; position: absolute; }
+.secTittleMS { top: 482px; left: 505px; width: 14px; height: 14px; position: absolute; }
+.secTittleDR { top: 482px; left: 578px; width: 14px; height: 14px; position: absolute; }
+
+.SecFirstName {
+    top: 501px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secMiddleName {
+    top: 519.5px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secLastName {
+    top: 538px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secFormerName {
+    top: 557px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secTIN {
+    top: 575.5px; left: 193px; width: 383px;
+  
+
+    position: absolute;
+}
+
+.secGhanaCard {
+    top: 594px; left: 253px; width: 288px;
+  
+
+    position: absolute;
+}
+
+.secgenderMale {
+    top: 632.5px; left: 242px; width: 15px; height: 13px;
+    position: absolute;
+}
+
+.secgenderFemale {
+    top: 632.5px; left: 338px; width: 15px; height: 13px;
+    position: absolute;
+}
+
+.secDOB {
+    top: 650px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secPOB {
+    top: 670px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secNationality {
+    top: 688.9px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secOccupation {
+    top: 709px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secPhoneNO1 {
+    top: 726.5px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secPhoneNO2 {
+    top: 745.5px; left: 193px; width: 383px;
+  
+
+    position: absolute;
+}
+
+.secEmail {
+    top: 783px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secDigitalAddress {
+    top: 839.5px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secLandmark {
+    top: 858.5px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.sechousenumber {
+    top: 878px; left: 193px; width: 123px;
+    position: absolute;
+}
+
+.secTown {
+    top: 878px; left: 352px; width: 223px;
+    position: absolute;
+}
+
+.secStreetNane {
+    top: 896px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secCity {
+    top: 914px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secDistrict {
+    top: 933.5px; left: 193px; width: 383px;
+  
+    position: absolute;
+}
+
+.secRegion {
+    top: 952.5px; left: 193px; width: 383px;
+  
+
+    position: absolute;
+}
+
+/* ---- this is for page 6 ---- */
+
+.secCountry {
+    top: 10px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+#secSignature {
+    top: 49px;
+    left: 280px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+/* ---- this is for page 7 ---- */
+
+.AuditorTIN {
+    top: 161px;
+    left: 193px;
+    width: 400px;
+
+    position: absolute;
+}
+
+.AuditorName {
+    top: 199px;
+    left: 193px;
+    width: 400px;
+
+    position: absolute;
+}
+
+.auditorGPS {
+   
+    top: 312px;
+    left: 193px;
+    width: 400px;
+  
+
+    position: absolute;
+}
+
+.auditorPOBOX {
+    top: 332px;
+    left: 193px;
+    width: 400px;
+
+    position: absolute;
+}
+
+.auditorHouseNumber {
+    padding-top:4px;
+    top: 424px;
+    left: 193px;
+    width: 400px;
+  
+    position: absolute;
+}
+
+.auditorStreetName {
+    top: 482px;
+    left: 193px;
+    width: 400px;
+  
+
+    position: absolute;
+}
+
+.auditorCity {
+    top: 518.5px;
+    left: 193px;
+    width: 400px;
+  
+    position: absolute;
+}
+
+.auditorDistrict {
+    top: 537px;
+    left: 193px;
+    width: 400px;
+  
+    position: absolute;
+}
+
+.auditorRegion {
+    top: 557px;
+    left: 193px;
+    width: 400px;
+  
+    position: absolute;
+}
+
+.auditorMobileNumber {
+    top: 575px;
+    left: 193px;
+    width: 400px;
+  
+    position: absolute;
+}
+
+.auditorOfficeNumber {
+    top: 594px;
+    left: 193px;
+    width: 400px;
+  
+
+    position: absolute;
+}
+
+.authorisedShares {
+    top: 651px;
+    left: 193px;
+    width: 390px;
+
+    position: absolute;
+}
+
+.StatedCapital {
+    padding-top: 1px;
+    top: 670px;
+    left: 230px;
+    width: 220px;
+border-bottom: 1px solid #5b5858;
+    position: absolute;
+}
+.equityAuthorisedShares {
+    top: 708px;
+    left: 193px;
+    width: 390px;
+
+    position: absolute;
+}
+.equityIssuedShares {
+    top: 764px;
+    left: 193px;
+    width: 390px;
+
+    position: absolute;
+}
+.equitySharesAmount {
+    top: 820px;
+    left: 233px;
+    width: 250px;
+
+    position: absolute;
+}
+
+
+/* ---- this is for page 8 ---- */
+.SH1tittleMR {
+    top: 143px;
+    left: 242px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH1tittleMRS {
+    top: 143px;
+    left: 315.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH1tittleMISS {
+    top: 143px;
+    left: 386px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH1tittleMS {
+    top: 143px;
+    left: 459px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH1tittleDR {
+    
+    top: 143px;
+    left: 529px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH1FirstName {
+    top: 160.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1MiddleName {
+    top: 180px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1LastName {
+    top: 198px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1FormerName {
+    top: 217px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1TIN {
+    top: 236px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+.SH1GhanaCard {
+    top: 255px;
+    left: 253px;
+    width: 288px;
+     position: absolute;
+}
+
+#SH1genderMale {
+    top: 293px;
+    left: 242px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#SH1genderFemale {
+    top: 293px;
+    left: 338px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH1DOB {
+    top: 312px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1POB {
+    top: 330px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1Nationality {
+    top: 349px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1Occupation {
+    top: 368.2px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1DigitalAddress {
+    top: 387.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1Landmark {
+    top: 406px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1housenumber {
+    top: 424.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1Town {
+    top: 443.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH1NoOfShare {
+    top: 462.5px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+.SH1ShareAmount {
+    top: 481px;
+    left: 258px;
+    width: 193px;
+  
+
+    position: absolute;
+}
+
+.sh1-signature {
+    top: 504px;
+    left: 280px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+/* Continue with all SH2 styles below exactly as above... */
+#SH2tittleMR {
+    top: 576px;
+    left: 242px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#SH2tittleMRS {
+    top: 576px;
+    left: 315.5px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#SH2tittleMISS {
+    top: 576px;
+    left: 386px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#SH2tittleMS {
+    top: 576px;
+    left: 459px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#SH2tittleDR {
+    top: 576px;
+    left: 578px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH2FirstName {
+    top: 594px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2MiddleName {
+    top: 613px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2LastName {
+    top: 632px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2FormerName {
+    top: 650.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2TIN {
+    top: 669.5px;
+    left: 193px;
+    width: 383px;
+  
+
+    position: absolute;
+}
+
+.SH2GhanaCard {
+    top: 689px;
+    left: 253px;
+    width: 288px;
+  
+
+    position: absolute;
+}
+
+#SH2genderMale {
+    top: 727px;
+    left: 242px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+#SH2genderFemale {
+    top: 727px;
+    left: 338px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+}
+
+.SH2DOB {
+    top: 745px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2POB {
+    top: 763.9px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2Nationality {
+    top: 782.5px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2Occupation {
+    top: 801px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2DigitalAddress {
+    top: 820px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2Landmark {
+    top: 839px;
+    left: 193px;
+    width: 208px;
+  
+    position: absolute;
+}
+
+.SH2housenumber {
+    top: 839px;
+    left: 422px;
+    width: 153px;
+  
+    position: absolute;
+}
+
+.SH2Town {
+    top: 857px;
+    left: 193px;
+    width: 383px;
+    position: absolute;
+}
+
+.SH2NoOfShare {
+    top: 876px;
+    left: 193px;
+    width: 383px;
+  
+    position: absolute;
+}
+
+.SH2ShareAmount {
+    top: 895.5px;
+    left: 258px;
+    width: 193px;
+  
+
+    position: absolute;
+}
+
+.sh2-signature {
+    top: 920px;
+    left: 280px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+
+/* ---- this is for page 12 ---- */
+.estimatedRevenue {
+    top: 142px;
+    left: 193px;
+    width: 209px;
+  
+
+    position: absolute;
+}
+
+.numOfEmp {
+    top: 161px;
+    left: 193px;
+    width: 209px;
+  
+
+    position: absolute;
+}
+
+#checkmark {
+    top: 199px;
+    left: 364px;
+    width: 14px;
+    height: 12px;
+    position: absolute;
+}

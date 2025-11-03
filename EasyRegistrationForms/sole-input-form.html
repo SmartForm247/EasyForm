@@ -444,14 +444,34 @@
           <fieldset id="businessInfo">
             <legend>Business Information</legend>
             <div class="form-group"><label>Business Name</label><input name="Business Name" required></div>
-            <div class="form-group"><label>Business Description</label><textarea name="Business Description" rows="3"></textarea></div>
+
+
             <div class="form-group"><label>Business Activities</label><input name="Business Activities"></div>
-            <div class="form-group"><label>Start Date</label><input name="Start Date" type="date"></div>
+            <div class="form-group"><label>Start Date</label><input name="Start Date" ></div>
             <div class="form-group"><label>Estimated Annual Revenue</label><input type="number" name="Estimated Annual Revenue"></div>
             <div class="form-group"><label>Number of Employees</label><input type="number" name="Number of Employees"></div>
           </fieldset>
+<!-- 3. Business Location -->
+          <fieldset id="businessLocation">
+            <legend>Business Location</legend>
+            <div class="form-group"><label>GPS Address</label><input name="GPS Address"></div>
+            <div class="form-group"><label>Landmark</label><input name="Landmark"></div>
+            <div class="form-group"><label>House No.</label><input name="Building No."></div>
+            <div class="form-group"><label>Town</label><input name="Town"></div>
+            <div class="form-group"><label>Street Name</label><input name="Street Name"></div>
+            <div class="form-group"><label>City</label><input name="City"></div>
+            <div class="form-group"><label>District</label><input name="District"></div>
+            <div class="form-group"><label>Region</label><input name="Region"></div>
+            <div class="form-group"><label>Postal Number</label><input name="Postal Number"></div>
+            <div class="form-group"><label>Postal Town</label><input name="Postal Town"></div>
+            <div class="form-group"><label>Postal Region</label><input name="Postal Region"></div>
+            <div class="form-group"><label>Business Contact</label><input name="Business Contact"></div>
+            <div class="form-group"><label>Business Email</label><input name="Business Email" type="email"></div>
+          </fieldset>
 
-          <!-- 2. Owner Information -->
+
+
+          <!-- PROPRIETOR Information -->
           <fieldset id="ownerDetails">
             <legend>Owner Information</legend>
             <div class="two-column">
@@ -463,7 +483,7 @@
               <div class="form-group"><label>Former Name</label><input name="Former Name"></div>
             </div>
             <div class="two-column">
-              <div class="form-group"><label>Date of Birth</label><input name="Date of Birth" type="date" required></div>
+              <div class="form-group"><label>Date of Birth</label><input name="Date of Birth"  required></div>
               <div class="form-group"><label>Place of Birth</label><input name="Place of Birth"></div>
             </div>
             <div class="two-column">
@@ -480,12 +500,13 @@
               <div class="form-group"><label>Ghana Card</label><input name="Ghana Card" required></div>
             </div>
             <div class="address-group">
-              <h5>Residential Address</h5>
+              <h5>Owner Residential Address</h5>
               <div class="two-column">
                 <div class="form-group"><label>GPS</label><input name="GPS"></div>
-                <div class="form-group"><label>House No.</label><input name="House No."></div>
+                <div class="form-group"><label>Landmark</label><input name="Landmark"></div>
               </div>
-              <div class="form-group"><label>Landmark</label><input name="Landmark"></div>
+              <div class="form-group"><label>House No.</label><input name="House No."></div>
+              
               <div class="form-group"><label>Street</label><input name="Street"></div>
               <div class="two-column">
                 <div class="form-group"><label>City</label><input name="City"></div>
@@ -499,24 +520,7 @@
             </div>
           </fieldset>
 
-          <!-- 3. Business Location -->
-          <fieldset id="businessLocation">
-            <legend>Business Location</legend>
-            <div class="form-group"><label>GPS Address</label><input name="GPS Address"></div>
-            <div class="form-group"><label>Landmark</label><input name="Landmark"></div>
-            <div class="form-group"><label>Building No.</label><input name="Building No."></div>
-            <div class="form-group"><label>Town</label><input name="Town"></div>
-            <div class="form-group"><label>Street Name</label><input name="Street Name"></div>
-            <div class="form-group"><label>City</label><input name="City"></div>
-            <div class="form-group"><label>District</label><input name="District"></div>
-            <div class="form-group"><label>Region</label><input name="Region"></div>
-            <div class="form-group"><label>Postal Number</label><input name="Postal Number"></div>
-            <div class="form-group"><label>Postal Town</label><input name="Postal Town"></div>
-            <div class="form-group"><label>Postal Region</label><input name="Postal Region"></div>
-            <div class="form-group"><label>Business Contact</label><input name="Business Contact"></div>
-            <div class="form-group"><label>Business Email</label><input name="Business Email" type="email"></div>
-          </fieldset>
-
+          
           <button type="submit">Submit Form</button>
           <button type="button" class="reset-btn" onclick="resetForm()">Reset Form</button>
         </form>

@@ -1,0 +1,151 @@
+.page {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+}
+
+/* Secretary Consent */
+.SecompanyName {
+    top: 226px;
+    left: 115px;
+    width: 405px;
+}
+
+.SecfullName {
+    top: 390px;
+    left: 115px;
+    width: 405px;
+}
+
+.SecResidentialAddress {
+    top: 527px;
+    left: 115px;
+    width: 525px;
+}
+
+.SecBoxNumber {
+    top: 590px;
+    left: 115px;
+    width: 525px;
+}
+
+.SecPhoneNumber {
+    top: 625px;
+    left: 204px;
+    width: 225px;
+}
+
+.SecQualification {
+    top: 690px;
+    left: 104px;
+    width: 425px;
+}
+
+.SecSignature {
+    top: 800px;
+    left: 210px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}
+
+.date9 {
+    top: 894px;
+    left: 144px;
+    width: 125px;
+}
+
+
+/* First Director Consent */
+.FdirectorCompanyName {
+    top: 296px;
+    left: 115px;
+    width: 405px;
+}
+
+.LFdirectorFullName {
+    top: 498px;
+    left: 115px;
+    width: 405px;
+}
+
+.FdirectorBoxNumber {
+    top: 630px;
+    left: 115px;
+    width: 525px;
+}
+
+.FdirectorResidentialAddress {
+    top: 700px;
+    left: 115px;
+    width: 525px;
+}
+
+.FdirectorPhoneNumber {
+    top: 760px;
+    left: 104px;
+    width: 225px;
+}
+
+.LFdirectorSignature {
+    top: 810px;
+    left: 210px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}
+
+.date10 {
+    top: 870px;
+    left: 144px;
+    width: 125px;
+}
+
+
+/* Second Director Consent */
+.SdirectorCompanyName {
+    top: 296px;
+    left: 115px;
+    width: 405px;
+}
+
+.LSdirectorFullName {
+   
+    top: 498px;
+    left: 115px;
+    width: 405px;
+}
+
+.SdirectorBoxNumber {
+    top: 630px;
+    left: 115px;
+    width: 525px;
+}
+
+.SdirectorResidentialAddress {
+    top: 698px;
+    left: 115px;
+    width: 525px;
+}
+
+.SdirectorPhoneNumber {
+    top: 767px;
+    left: 104px;
+    width: 225px;
+}
+
+.LSdirectorSignature {
+    top: 810px;
+    left: 210px;
+    width: 157px;
+    height: 39px;
+    padding-top: 15px;
+}
+
+.date11 {
+    top: 870px;
+    left: 144px;
+    width: 125px;
+}
