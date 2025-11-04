@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../llc-css/signatures.css">
     
      <link rel="stylesheet" href="../llc-css/renderer.css">
-    <title>LIMITED LIABILITY FORM</title>
+    <title>SOLE PROPRIETORSHIP FORM</title>
     <style></style>
   </head>
   <body>
@@ -31,189 +31,233 @@
   
 <section class="sect1" id="sect1">
   <div class="input-section">
-    
-    <h2 class="header">Limited Form</h2>
 
-  <form id="icompanyForm">
+    <h2 class="header">SOLE PROPRIETORSHIP Form</h2>
 
-    <!-- ✅ COMPANY BASIC INFO -->
-    <fieldset id="icompanyInfo">
-      <legend>Company Information</legend>
-      <div class="form-group">
-        <label for="icompanyName">Company Name:</label>
-        <input type="text" id="icompanyName" required>
-      </div>
-      <div class="form-group">
-        <label for="iendWith">Company Name End With:</label>
-        <select id="iendWith" required>
-          <option value="">-- Select --</option>
-          <option value="Limited">Limited </option>
-          <option value="Ltd">Ltd</option>
-        </select>
-      </div>
+ <form id="icompanyForm">
 
-      <div class="form-group">
-        <label for="iconstitutionType">Constitution Type:</label>
-        <select id="iconstitutionType" required>
-          <option value="">-- Select --</option>
-          <option value="Registered">Registered</option>
-          <option value="Standard">Standard</option>
-        </select>
-      </div>
+  <!-- ✅ COMPANY BASIC INFO -->
+  <fieldset id="icompanyInfo">
+    <legend>Company Information</legend>
+    <div class="form-group">
+      <label for="icompanyName">Company Name:</label>
+      <input type="text" id="icompanyName" required>
+    </div>
 
-      <div class="form-group">
-        <label for="ipresentedBy">Presented By:</label>
-        <input type="text" id="ipresentedBy">
-      </div>
+    <div class="form-group">
+      <label for="iactivities">Activities:</label>
+      <input type="text" id="iactivities">
+    </div>
 
-      <div class="form-group">
-        <label for="ipresenterTin">Presenter Tin:</label>
-        <input type="text" id="ipresenterTin">
-      </div>
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="text" id="date">
+    </div>
 
-      <div class="form-group">
-        <label for="iactivities">Activities:</label>
-        <input type="text" id="iactivities">
-      </div>
+    <div class="form-group">
+      <label for="iestimatedRevenue">Estimated Revenue:</label>
+      <input type="text" id="iestimatedRevenue" class="cell">
+    </div>
 
-      <div class="form-group">
-        <label for="icapital">Stated Capital:</label>
-        <input type="text" id="icapital" class="cell">
-      </div>
+    <div class="form-group">
+      <label for="inumOfEmployees">Number Of Employees:</label>
+      <input type="text" id="inumOfEmployees" class="cell">
+    </div>
+  </fieldset>
 
-       <div class="form-group">
-        <label for="iestimatedRevenue">Estimated Revenue:</label>
-        <input type="text" id="iestimatedRevenue" class="cell">
-      </div>
-
-       <div class="form-group">
-        <label for="inumOfEmployees">Number Of Employees:</label>
-        <input type="text" id="inumOfEmployees" class="cell">
-      </div>
-    </fieldset>
-
-    <!-- ✅ OFFICE DETAILS -->
-    <fieldset id="iofficeDetails">
-      <legend>Office Details</legend>
-      <div class="form-group">
-        <label for="iofficeGps">GPS Address:</label>
-        <input type="text" id="iofficeGps">
-      </div>
-      <div class="form-group">
-        <label for="iofficeLandmark">Landmark:</label>
-        <input type="text" id="iofficeLandmark">
-      </div>
-      <div class="form-group">
-        <label for="iofficeHse">Building No.:</label>
-        <input type="text" id="iofficeHse">
-      </div>
-      <div class="form-group">
-        <label for="iofficeTown">Town:</label>
-        <input type="text" id="iofficeTown">
-      </div>
-      <div class="form-group">
-        <label for="iofficeStreetName">Street Name:</label>
-        <input type="text" id="iofficeStreetName">
-      </div>
-      <div class="form-group">
-        <label for="iofficeCity">City:</label>
-        <input type="text" id="iofficeCity">
-      </div>
-      <div class="form-group">
-        <label for="iofficeDistrict">District:</label>
-        <input type="text" id="iofficeDistrict">
-      </div>
-      <div class="form-group">
-        <label for="iofficeRegion">Region:</label>
-        <input type="text" id="iofficeRegion">
-      </div>
-     
-      
-      <div class="form-group">
-        <label for="iofficePostalType">Postal Type:</label>
-        <select id="iofficePostalType" required>
-          <option value="">-- Select --</option>
-          <option value="pobox">P.O.BOX</option>
-          <option value="pmb">PMB</option>
-           <option value="dtd">DTD</option>
-        </select>
-      </div>
-
-      <div id="iofficePostalFields">
-        <div class="form-group">
-          <label for="iofficeBoxNumber">postal Number:</label>
-          <input type="text" id="iofficeBoxNumber">
-        </div>
-        <div class="form-group">
-          <label for="iofficeBoxTown">postal Town:</label>
-          <input type="text" id="iofficeBoxTown">
-        </div>
-        <div class="form-group">
-          <label for="iofficeBoxRegion">postal Region:</label>
-          <input type="text" id="iofficeBoxRegion">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="iofficeContact1">Contact 1:</label>
-        <input type="text" id="iofficeContact1">
-      </div>
-      <div class="form-group">
-        <label for="iofficeContact2">Contact 2:</label>
-        <input type="text" id="iofficeContact2">
-      </div>
-      <div class="form-group">
-        <label for="iofficeEmail">Email:</label>
-        <input type="email" id="iofficeEmail">
-      </div>
-    </fieldset>
-
-    <!-- ✅ DIRECTORS -->
-    <fieldset id="idirectorsSection">
-      <legend>Directors</legend>
-      <div id="idirectorsContainer"></div>
-      <button type="button" id="iaddDirectorBtn">Add Director</button>
-    </fieldset>
-
-    <!-- ✅ SECRETARY -->
-    <fieldset id="isecretarySetting">
-      <legend>Secretary Setting</legend>
-      <div class="form-group">
-        <label for="isecQualification">Qualification:</label>
-       <select id="isecQualification" class="secQualification">
-          <option value="">Select Qualification</option>
-          <option value="Professional qualification">Professional qualification</option>
-          <option value="Tertiary level qualification">Tertiary level qualification</option>
-          <option value="Company Secretary Trainee">Company Secretary Trainee</option>
-          <option value="Barrister or Solicitor in the Republic">Barrister or Solicitor in the Republic</option>
-          <option value="Institute of Chartered Accountants">Institute of Chartered Accountants</option>
-          <option value="Under supervision of a qualified Company Secretary">Under supervision of a qualified Company Secretary</option>
-          <option value="Institute of Chartered Secretaries and Administrators">Institute of Chartered Secretaries and Administrators</option>
+  <!-- ✅ OFFICE DETAILS -->
+  <fieldset id="iofficeDetails">
+    <legend>Office Details</legend>
+    <div class="form-group">
+      <label for="iofficeGps">GPS Address:</label>
+      <input type="text" id="iofficeGps">
+    </div>
+    <div class="form-group">
+      <label for="iofficeLandmark">Landmark:</label>
+      <input type="text" id="iofficeLandmark">
+    </div>
+    <div class="form-group">
+      <label for="iofficeHseNo">Building No.:</label>
+      <input type="text" id="iofficeHseNo">
+    </div>
+    <div class="form-group">
+      <label for="iofficeTown">Town:</label>
+      <input type="text" id="iofficeTown">
+    </div>
+    <div class="form-group">
+      <label for="iofficeStreetName">Street Name:</label>
+      <input type="text" id="iofficeStreetName">
+    </div>
+    <div class="form-group">
+      <label for="iofficeCity">City:</label>
+      <input type="text" id="iofficeCity">
+    </div>
+    <div class="form-group">
+      <label for="iofficeDistrict">District:</label>
+      <input type="text" id="iofficeDistrict">
+    </div>
+    <div class="form-group">
+      <label for="iofficeRegion">Region:</label>
+      <input type="text" id="iofficeRegion">
+    </div>
+    <div class="form-group">
+      <label for="iofficePostalType">Postal Type:</label>
+      <select id="iofficePostalType" required>
+        <option value="">-- Select --</option>
+        <option value="pobox">P.O.BOX</option>
+        <option value="pmb">PMB</option>
+        <option value="dtd">DTD</option>
       </select>
+    </div>
 
+    <div id="iofficePostalFields">
+      <div class="form-group">
+        <label for="iofficeBoxNumber">Postal Number:</label>
+        <input type="text" id="iofficeBoxNumber">
       </div>
-    </fieldset>
+      <div class="form-group">
+        <label for="iofficeBoxTown">Postal Town:</label>
+        <input type="text" id="iofficeBoxTown">
+      </div>
+      <div class="form-group">
+        <label for="iofficeBoxRegion">Postal Region:</label>
+        <input type="text" id="iofficeBoxRegion">
+      </div>
+    </div>
 
-    <fieldset id="isecretarySection">
-      <legend>Secretary Details</legend>
-      <div id="isecretaryFormFields"></div>
-    </fieldset>
+    <div class="form-group">
+      <label for="iofficeContact1">Contact:</label>
+      <input type="text" id="iofficeContact1">
+    </div>
 
-    <!-- ✅ SUBSCRIBERS -->
-   
-    <fieldset id="isubscribersSection">
-      <legend>Subscribers</legend>
-      <div id="isubscribersContainer"></div>
-      <button type="button" id="iaddSubscriberBtn">Add Subscriber</button>
-    </fieldset>
+    <div class="form-group">
+      <label for="iofficeEmail">Email:</label>
+      <input type="email" id="iofficeEmail">
+    </div>
+  </fieldset>
 
-    <fieldset id="iownersSection">
-  <legend>Beneficial Owners</legend>
-  <div id="iownersContainer"></div>
-  <button type="button" id="iaddOwnerBtn">Add Beneficial Owner</button>
-</fieldset>
+  <!-- ✅ OWNER INFORMATION -->
+  <fieldset id="iownerInfo">
+    <legend>Owner Information</legend>
 
-  </form>
+    <div class="form-group">
+      <label for="iownerFname">First Name:</label>
+      <input type="text" id="iownerFname" value="FRANCIS">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerMname">Middle Name:</label>
+      <input type="text" id="iownerMname" value="www">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerSurname">Surname:</label>
+      <input type="text" id="iownerSurname" value="AMUZU">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerFormerName">Former Name:</label>
+      <input type="text" id="iownerFormerName" value="wwwwwwww">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerDob">Date of Birth:</label>
+      <input type="text" id="iownerDob" value="2333">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerPob">Place of Birth:</label>
+      <input type="text" id="iownerPob" value="wwww">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerNationality">Nationality:</label>
+      <input type="text" id="iownerNationality" value="3333">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerOccupation">Occupation:</label>
+      <input type="text" id="iownerOccupation" value="www">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerContact1">Contact 1:</label>
+      <input type="text" id="iownerContact1" value="222">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerContact2">Contact 2:</label>
+      <input type="text" id="iownerContact2" value="2222">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerEmail">Email:</label>
+      <input type="email" id="iownerEmail" value="franciskwadzoamuzu@gmail.com">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerMotherName">Mother's Name:</label>
+      <input type="text" id="iownerMotherName" value="sssss">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerTin">TIN:</label>
+      <input type="text" id="iownerTin" value="sssssssss">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerGhanaCard">Ghana Card:</label>
+      <input type="text" id="iownerGhanaCard" value="ssss">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerGps">GPS:</label>
+      <input type="text" id="iownerGps" value="Residential Address">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerLandmark">Landmark:</label>
+      <input type="text" id="iownerLandmark" value="NEAR KWAMENS HOTEL">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerHseNo">House No.:</label>
+      <input type="text" id="iownerHseNo" value="26">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerStreet">Street:</label>
+      <input type="text" id="iownerStreet" value="Okorase Ghana">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerCity">City:</label>
+      <input type="text" id="iownerCity" value="ACCRA">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerTown">Town:</label>
+      <input type="text" id="iownerTown" value="ACCRA">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerDistrict">District:</label>
+      <input type="text" id="iownerDistrict" value="ADENTA">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerRegion">Region:</label>
+      <input type="text" id="iownerRegion" value="GREATER ACCRA">
+    </div>
+
+    <div class="form-group">
+      <label for="iownerCountry">Country:</label>
+      <input type="text" id="iownerCountry">
+    </div>
+  </fieldset>
+
+</form>
+
 
   
   </div>
