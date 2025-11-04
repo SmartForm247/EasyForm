@@ -1,0 +1,124 @@
+ body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+  .button-container {
+  position: fixed;
+ width: 500px;
+  right: 200px;
+  left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  
+  border-radius: 10px;
+  z-index: 1000;  /* ensure it stays on top */
+  
+}
+
+/* Make all buttons share the same style */
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Different colors for each button */
+.print-btn { background: green; }
+.clear-btn { background: blue; }
+.clear-all { background: red; }
+.home { background: rgb(9, 164, 184); }
+
+/* Optional hover effects */
+.print-btn:hover { background: #005c00; }
+.clear-btn:hover { background: #003d99; }
+.clear-all:hover { background: darkred; }
+.home:hover { background: #007d8c; }
+
+
+    /* Page wrapper */
+    .page {
+      position: relative;    /* allows overlay */
+      display: block;
+      width: 210mm;          /* A4 width */
+      margin: 0 auto;
+      border: none;
+      page-break-before: auto;
+      page-break-inside: avoid;
+    }
+
+    .page img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Text overlay */
+    .overlay-text {
+      position: absolute;
+     font-weight:bolder;
+      color: black;
+      background: rgb(206, 76, 76); /* optional: white background for readability */
+      padding: 0px 2px;
+      font-family: 'Caveat', cursive; /* handwriting style */
+      font-size: 13.3px;                /* bigger, like pen writing */
+      
+      color: #222;                    /* dark ink color */
+      text-transform: uppercase;             /* force ALL CAPS */
+      
+    }
+
+    /* Print adjustments */
+    @media print {
+      body {
+        background: white;
+      }
+      .button-container {
+        display: none;  /* hide button container */
+      }
+      .print-btn {
+        display: none;
+      }
+     .clear-btn{
+        display: none;
+      }
+
+      .clear-all{
+        display: none;
+      }
+      .home{
+        display: none;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+      }
+    }
+
+
+
+
+.signature{
+  background-color: transparent;
+  color: red;
+}
+
+ .static{
+  color: #003d99;
+  background-color: #f9f9f9;
+ }
