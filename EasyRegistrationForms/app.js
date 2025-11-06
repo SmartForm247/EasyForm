@@ -313,7 +313,7 @@ function updateDashboard(userData) {
     // Update credit balance
     const balanceElement = document.getElementById('creditBalance');
     if (balanceElement) {
-        balanceElement.textContent = `${userData.credit_balance || 0} GHS`;
+        balanceElement.textContent = `${userData.credit_balance || 0} Creadits`;
     }
     
     // Update total usage count
@@ -425,7 +425,7 @@ function updateDashboard(userData) {
                             <div class="text-muted small">${date}</div>
                         </div>
                         <div class="fw-bold ${transaction.type === 'credit' ? 'text-success' : 'text-danger'}">
-                            ${sign}${transaction.amount} GHS
+                            ${sign}${transaction.amount} Credits
                         </div>
                     </div>
                 `;
